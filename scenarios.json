@@ -1,0 +1,39 @@
+[
+  {
+    "scenario_id": "SCN-001",
+    "name": "Atlanta staffing reduction",
+    "type": "PersonnelUnavailable",
+    "facility_id": "FAC-ATL",
+    "personnel_unavailable_pct": 30,
+    "duration_hours": 72
+  },
+  {
+    "scenario_id": "SCN-002",
+    "name": "Denver technology hub outage",
+    "type": "FacilityOffline",
+    "facility_id": "FAC-DEN",
+    "duration_hours": 24
+  },
+  {
+    "scenario_id": "SCN-003",
+    "name": "Washington access outage",
+    "type": "FacilityOffline",
+    "facility_id": "FAC-DC",
+    "duration_hours": 48
+  },
+  {
+    "scenario_id": "SCN-004",
+    "name": "Chicago cybersecurity team shortage",
+    "type": "RoleUnavailable",
+    "facility_id": "FAC-CHI",
+    "role": "Cybersecurity Analyst",
+    "duration_hours": 48
+  },
+  {
+    "scenario_id": "SCN-005",
+    "name": "San Diego service disruption",
+    "type": "FacilityOffline",
+    "facility_id": "FAC-SAN",
+    "duration_hours": 36
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "type": "PersonnelUnavailable",
+  "facility_id": "FAC-ATL",
+  "personnel_unavailable_pct": 0,
+  "model_variant": "human_centered",
+  "employee_updates": [
+    {
+      "employee_id": "EMP-001",
+      "skills": {
+        "leadership": 3
+      },
+      "experience": [
+        {
+          "workflow_id": "WF-05",
+          "years_in_role": 10
+        }
+      ],
+      "relationships": [
+        {
+          "workflow_id": "WF-05",
+          "target_employee_id": "EMP-045",
+          "collaboration_events": 100,
+          "handoff_events": 7,
+          "mean_handoff_hours": 0.1
+        }
+      ]
+    }
+  ]
+}

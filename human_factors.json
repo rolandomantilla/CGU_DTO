@@ -1,0 +1,2341 @@
+{
+  "schema_version": 1,
+  "data_origin": "Synthetic demonstration inputs; not observed employee records or fitted research parameters. Synthetic years_in_role are consistent per employee across assignments, using the first assignment value; similar-task counts remain workflow-specific.",
+  "observation_window_days": 30,
+  "parameters": {
+    "skill_efficiency_floor": 0.5,
+    "experience_efficiency_floor": 0.6,
+    "reference_years_in_role": 10,
+    "reference_similar_tasks": 500,
+    "collaboration_reference_events": 20,
+    "disconnected_handoff_hours": 2
+  },
+  "workflow_reference": {
+    "WF-01": {
+      "task_work_hours": 4.5
+    },
+    "WF-02": {
+      "task_work_hours": 5.0
+    },
+    "WF-03": {
+      "task_work_hours": 5.5
+    },
+    "WF-04": {
+      "task_work_hours": 6.0
+    },
+    "WF-05": {
+      "task_work_hours": 6.5
+    },
+    "WF-06": {
+      "task_work_hours": 7.0
+    },
+    "WF-07": {
+      "task_work_hours": 7.5
+    },
+    "WF-08": {
+      "task_work_hours": 8.0
+    },
+    "WF-09": {
+      "task_work_hours": 8.5
+    },
+    "WF-10": {
+      "task_work_hours": 9.0
+    },
+    "WF-11": {
+      "task_work_hours": 9.5
+    },
+    "WF-12": {
+      "task_work_hours": 10.0
+    }
+  },
+  "experience": [
+    {
+      "employee_id": "EMP-002",
+      "workflow_id": "WF-01",
+      "years_in_role": 1.7
+    },
+    {
+      "employee_id": "EMP-003",
+      "workflow_id": "WF-01",
+      "years_in_role": 2.4
+    },
+    {
+      "employee_id": "EMP-011",
+      "workflow_id": "WF-01",
+      "years_in_role": 6
+    },
+    {
+      "employee_id": "EMP-012",
+      "workflow_id": "WF-01",
+      "years_in_role": 8
+    },
+    {
+      "employee_id": "EMP-033",
+      "workflow_id": "WF-01",
+      "years_in_role": 3.2
+    },
+    {
+      "employee_id": "EMP-042",
+      "workflow_id": "WF-01",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-071",
+      "workflow_id": "WF-01",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-083",
+      "workflow_id": "WF-01",
+      "years_in_role": 7
+    },
+    {
+      "employee_id": "EMP-090",
+      "workflow_id": "WF-01",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-007",
+      "workflow_id": "WF-02",
+      "years_in_role": 5.5
+    },
+    {
+      "employee_id": "EMP-008",
+      "workflow_id": "WF-02",
+      "years_in_role": 6.2
+    },
+    {
+      "employee_id": "EMP-020",
+      "workflow_id": "WF-02",
+      "years_in_role": 4.5
+    },
+    {
+      "employee_id": "EMP-023",
+      "workflow_id": "WF-02",
+      "years_in_role": 6.6
+    },
+    {
+      "employee_id": "EMP-024",
+      "workflow_id": "WF-02",
+      "years_in_role": 2
+    },
+    {
+      "employee_id": "EMP-025",
+      "workflow_id": "WF-02",
+      "years_in_role": 8.0
+    },
+    {
+      "employee_id": "EMP-026",
+      "workflow_id": "WF-02",
+      "years_in_role": 8
+    },
+    {
+      "employee_id": "EMP-027",
+      "workflow_id": "WF-02",
+      "years_in_role": 9.4
+    },
+    {
+      "employee_id": "EMP-046",
+      "workflow_id": "WF-02",
+      "years_in_role": 2.5
+    },
+    {
+      "employee_id": "EMP-066",
+      "workflow_id": "WF-02",
+      "years_in_role": 6.4
+    },
+    {
+      "employee_id": "EMP-086",
+      "workflow_id": "WF-02",
+      "years_in_role": 0.2
+    },
+    {
+      "employee_id": "EMP-087",
+      "workflow_id": "WF-02",
+      "years_in_role": 0.9
+    },
+    {
+      "employee_id": "EMP-010",
+      "workflow_id": "WF-03",
+      "years_in_role": 7.9
+    },
+    {
+      "employee_id": "EMP-031",
+      "workflow_id": "WF-03",
+      "years_in_role": 2.4
+    },
+    {
+      "employee_id": "EMP-049",
+      "workflow_id": "WF-03",
+      "years_in_role": 4.9
+    },
+    {
+      "employee_id": "EMP-050",
+      "workflow_id": "WF-03",
+      "years_in_role": 4
+    },
+    {
+      "employee_id": "EMP-051",
+      "workflow_id": "WF-03",
+      "years_in_role": 6.3
+    },
+    {
+      "employee_id": "EMP-069",
+      "workflow_id": "WF-03",
+      "years_in_role": 8.8
+    },
+    {
+      "employee_id": "EMP-070",
+      "workflow_id": "WF-03",
+      "years_in_role": 9.5
+    },
+    {
+      "employee_id": "EMP-089",
+      "workflow_id": "WF-03",
+      "years_in_role": 2
+    },
+    {
+      "employee_id": "EMP-005",
+      "workflow_id": "WF-04",
+      "years_in_role": 4.7
+    },
+    {
+      "employee_id": "EMP-014",
+      "workflow_id": "WF-04",
+      "years_in_role": 0.9
+    },
+    {
+      "employee_id": "EMP-036",
+      "workflow_id": "WF-04",
+      "years_in_role": 6.2
+    },
+    {
+      "employee_id": "EMP-043",
+      "workflow_id": "WF-04",
+      "years_in_role": 1.0
+    },
+    {
+      "employee_id": "EMP-055",
+      "workflow_id": "WF-04",
+      "years_in_role": 9.4
+    },
+    {
+      "employee_id": "EMP-062",
+      "workflow_id": "WF-04",
+      "years_in_role": 4.2
+    },
+    {
+      "employee_id": "EMP-063",
+      "workflow_id": "WF-04",
+      "years_in_role": 4.9
+    },
+    {
+      "employee_id": "EMP-064",
+      "workflow_id": "WF-04",
+      "years_in_role": 5.6
+    },
+    {
+      "employee_id": "EMP-065",
+      "workflow_id": "WF-04",
+      "years_in_role": 6
+    },
+    {
+      "employee_id": "EMP-074",
+      "workflow_id": "WF-04",
+      "years_in_role": 2.5
+    },
+    {
+      "employee_id": "EMP-075",
+      "workflow_id": "WF-04",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-076",
+      "workflow_id": "WF-04",
+      "years_in_role": 3.9
+    },
+    {
+      "employee_id": "EMP-093",
+      "workflow_id": "WF-04",
+      "years_in_role": 5.7
+    },
+    {
+      "employee_id": "EMP-001",
+      "workflow_id": "WF-05",
+      "years_in_role": 2.2
+    },
+    {
+      "employee_id": "EMP-045",
+      "workflow_id": "WF-05",
+      "years_in_role": 2.7
+    },
+    {
+      "employee_id": "EMP-080",
+      "workflow_id": "WF-05",
+      "years_in_role": 3
+    },
+    {
+      "employee_id": "EMP-081",
+      "workflow_id": "WF-05",
+      "years_in_role": 7.7
+    },
+    {
+      "employee_id": "EMP-082",
+      "workflow_id": "WF-05",
+      "years_in_role": 8.4
+    },
+    {
+      "employee_id": "EMP-084",
+      "workflow_id": "WF-05",
+      "years_in_role": 6
+    },
+    {
+      "employee_id": "EMP-085",
+      "workflow_id": "WF-05",
+      "years_in_role": 0.4
+    },
+    {
+      "employee_id": "EMP-099",
+      "workflow_id": "WF-05",
+      "years_in_role": 0.1
+    },
+    {
+      "employee_id": "EMP-100",
+      "workflow_id": "WF-05",
+      "years_in_role": 0.8
+    },
+    {
+      "employee_id": "EMP-021",
+      "workflow_id": "WF-06",
+      "years_in_role": 6.4
+    },
+    {
+      "employee_id": "EMP-022",
+      "workflow_id": "WF-06",
+      "years_in_role": 7.1
+    },
+    {
+      "employee_id": "EMP-035",
+      "workflow_id": "WF-06",
+      "years_in_role": 6.1
+    },
+    {
+      "employee_id": "EMP-053",
+      "workflow_id": "WF-06",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-054",
+      "workflow_id": "WF-06",
+      "years_in_role": 9.3
+    },
+    {
+      "employee_id": "EMP-082",
+      "workflow_id": "WF-06",
+      "years_in_role": 8.4
+    },
+    {
+      "employee_id": "EMP-083",
+      "workflow_id": "WF-06",
+      "years_in_role": 7
+    },
+    {
+      "employee_id": "EMP-092",
+      "workflow_id": "WF-06",
+      "years_in_role": 5.6
+    },
+    {
+      "employee_id": "EMP-026",
+      "workflow_id": "WF-07",
+      "years_in_role": 8
+    },
+    {
+      "employee_id": "EMP-027",
+      "workflow_id": "WF-07",
+      "years_in_role": 9.4
+    },
+    {
+      "employee_id": "EMP-028",
+      "workflow_id": "WF-07",
+      "years_in_role": 1.5
+    },
+    {
+      "employee_id": "EMP-029",
+      "workflow_id": "WF-07",
+      "years_in_role": 2.2
+    },
+    {
+      "employee_id": "EMP-030",
+      "workflow_id": "WF-07",
+      "years_in_role": 2.9
+    },
+    {
+      "employee_id": "EMP-031",
+      "workflow_id": "WF-07",
+      "years_in_role": 2.4
+    },
+    {
+      "employee_id": "EMP-032",
+      "workflow_id": "WF-07",
+      "years_in_role": 4.3
+    },
+    {
+      "employee_id": "EMP-047",
+      "workflow_id": "WF-07",
+      "years_in_role": 4.7
+    },
+    {
+      "employee_id": "EMP-048",
+      "workflow_id": "WF-07",
+      "years_in_role": 5.4
+    },
+    {
+      "employee_id": "EMP-067",
+      "workflow_id": "WF-07",
+      "years_in_role": 6
+    },
+    {
+      "employee_id": "EMP-088",
+      "workflow_id": "WF-07",
+      "years_in_role": 3.1
+    },
+    {
+      "employee_id": "EMP-002",
+      "workflow_id": "WF-08",
+      "years_in_role": 1.7
+    },
+    {
+      "employee_id": "EMP-003",
+      "workflow_id": "WF-08",
+      "years_in_role": 2.4
+    },
+    {
+      "employee_id": "EMP-004",
+      "workflow_id": "WF-08",
+      "years_in_role": 5.2
+    },
+    {
+      "employee_id": "EMP-005",
+      "workflow_id": "WF-08",
+      "years_in_role": 4.7
+    },
+    {
+      "employee_id": "EMP-006",
+      "workflow_id": "WF-08",
+      "years_in_role": 6.6
+    },
+    {
+      "employee_id": "EMP-016",
+      "workflow_id": "WF-08",
+      "years_in_role": 3
+    },
+    {
+      "employee_id": "EMP-017",
+      "workflow_id": "WF-08",
+      "years_in_role": 4
+    },
+    {
+      "employee_id": "EMP-056",
+      "workflow_id": "WF-08",
+      "years_in_role": 1.2
+    },
+    {
+      "employee_id": "EMP-057",
+      "workflow_id": "WF-08",
+      "years_in_role": 1.9
+    },
+    {
+      "employee_id": "EMP-078",
+      "workflow_id": "WF-08",
+      "years_in_role": 6.5
+    },
+    {
+      "employee_id": "EMP-096",
+      "workflow_id": "WF-08",
+      "years_in_role": 9.0
+    },
+    {
+      "employee_id": "EMP-018",
+      "workflow_id": "WF-09",
+      "years_in_role": 5.2
+    },
+    {
+      "employee_id": "EMP-039",
+      "workflow_id": "WF-09",
+      "years_in_role": 9.8
+    },
+    {
+      "employee_id": "EMP-044",
+      "workflow_id": "WF-09",
+      "years_in_role": 3.2
+    },
+    {
+      "employee_id": "EMP-045",
+      "workflow_id": "WF-09",
+      "years_in_role": 2.7
+    },
+    {
+      "employee_id": "EMP-058",
+      "workflow_id": "WF-09",
+      "years_in_role": 2.9
+    },
+    {
+      "employee_id": "EMP-079",
+      "workflow_id": "WF-09",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-097",
+      "workflow_id": "WF-09",
+      "years_in_role": 10.0
+    },
+    {
+      "employee_id": "EMP-098",
+      "workflow_id": "WF-09",
+      "years_in_role": 0.6
+    },
+    {
+      "employee_id": "EMP-009",
+      "workflow_id": "WF-10",
+      "years_in_role": 9.3
+    },
+    {
+      "employee_id": "EMP-015",
+      "workflow_id": "WF-10",
+      "years_in_role": 3.4
+    },
+    {
+      "employee_id": "EMP-023",
+      "workflow_id": "WF-10",
+      "years_in_role": 6.6
+    },
+    {
+      "employee_id": "EMP-024",
+      "workflow_id": "WF-10",
+      "years_in_role": 2
+    },
+    {
+      "employee_id": "EMP-028",
+      "workflow_id": "WF-10",
+      "years_in_role": 1.5
+    },
+    {
+      "employee_id": "EMP-029",
+      "workflow_id": "WF-10",
+      "years_in_role": 2.2
+    },
+    {
+      "employee_id": "EMP-030",
+      "workflow_id": "WF-10",
+      "years_in_role": 2.9
+    },
+    {
+      "employee_id": "EMP-037",
+      "workflow_id": "WF-10",
+      "years_in_role": 7
+    },
+    {
+      "employee_id": "EMP-038",
+      "workflow_id": "WF-10",
+      "years_in_role": 8
+    },
+    {
+      "employee_id": "EMP-060",
+      "workflow_id": "WF-10",
+      "years_in_role": 4.6
+    },
+    {
+      "employee_id": "EMP-068",
+      "workflow_id": "WF-10",
+      "years_in_role": 0.1
+    },
+    {
+      "employee_id": "EMP-077",
+      "workflow_id": "WF-10",
+      "years_in_role": 6.4
+    },
+    {
+      "employee_id": "EMP-094",
+      "workflow_id": "WF-10",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-095",
+      "workflow_id": "WF-10",
+      "years_in_role": 7
+    },
+    {
+      "employee_id": "EMP-019",
+      "workflow_id": "WF-11",
+      "years_in_role": 2
+    },
+    {
+      "employee_id": "EMP-040",
+      "workflow_id": "WF-11",
+      "years_in_role": 1.0
+    },
+    {
+      "employee_id": "EMP-041",
+      "workflow_id": "WF-11",
+      "years_in_role": 1.7
+    },
+    {
+      "employee_id": "EMP-059",
+      "workflow_id": "WF-11",
+      "years_in_role": 4.2
+    },
+    {
+      "employee_id": "EMP-061",
+      "workflow_id": "WF-11",
+      "years_in_role": 5.6
+    },
+    {
+      "employee_id": "EMP-082",
+      "workflow_id": "WF-11",
+      "years_in_role": 8.4
+    },
+    {
+      "employee_id": "EMP-099",
+      "workflow_id": "WF-11",
+      "years_in_role": 0.1
+    },
+    {
+      "employee_id": "EMP-100",
+      "workflow_id": "WF-11",
+      "years_in_role": 0.8
+    },
+    {
+      "employee_id": "EMP-013",
+      "workflow_id": "WF-12",
+      "years_in_role": 2.6
+    },
+    {
+      "employee_id": "EMP-034",
+      "workflow_id": "WF-12",
+      "years_in_role": 4
+    },
+    {
+      "employee_id": "EMP-052",
+      "workflow_id": "WF-12",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-062",
+      "workflow_id": "WF-12",
+      "years_in_role": 4.2
+    },
+    {
+      "employee_id": "EMP-072",
+      "workflow_id": "WF-12",
+      "years_in_role": 3
+    },
+    {
+      "employee_id": "EMP-073",
+      "workflow_id": "WF-12",
+      "years_in_role": 1
+    },
+    {
+      "employee_id": "EMP-091",
+      "workflow_id": "WF-12",
+      "years_in_role": 6.7
+    }
+  ],
+  "relationships": [
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-003",
+      "collaboration_events": 6,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-011",
+      "collaboration_events": 13,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-012",
+      "collaboration_events": 20,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-033",
+      "collaboration_events": 27,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-042",
+      "collaboration_events": 34,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-071",
+      "collaboration_events": 5,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-083",
+      "collaboration_events": 12,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-090",
+      "collaboration_events": 19,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-003",
+      "target_employee_id": "EMP-011",
+      "collaboration_events": 26,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-011",
+      "target_employee_id": "EMP-012",
+      "collaboration_events": 33,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-012",
+      "target_employee_id": "EMP-033",
+      "collaboration_events": 40,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-033",
+      "target_employee_id": "EMP-042",
+      "collaboration_events": 11,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-042",
+      "target_employee_id": "EMP-071",
+      "collaboration_events": 18,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-071",
+      "target_employee_id": "EMP-083",
+      "collaboration_events": 25,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-083",
+      "target_employee_id": "EMP-090",
+      "collaboration_events": 32,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-01",
+      "source_employee_id": "EMP-090",
+      "target_employee_id": "EMP-002",
+      "collaboration_events": 39,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-008",
+      "collaboration_events": 7,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-020",
+      "collaboration_events": 14,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-023",
+      "collaboration_events": 21,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-024",
+      "collaboration_events": 28,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-025",
+      "collaboration_events": 35,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-026",
+      "collaboration_events": 6,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-027",
+      "collaboration_events": 13,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-046",
+      "collaboration_events": 20,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-066",
+      "collaboration_events": 27,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-086",
+      "collaboration_events": 34,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-007",
+      "target_employee_id": "EMP-087",
+      "collaboration_events": 5,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-008",
+      "target_employee_id": "EMP-020",
+      "collaboration_events": 12,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-020",
+      "target_employee_id": "EMP-023",
+      "collaboration_events": 19,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-023",
+      "target_employee_id": "EMP-024",
+      "collaboration_events": 26,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-024",
+      "target_employee_id": "EMP-025",
+      "collaboration_events": 33,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-025",
+      "target_employee_id": "EMP-026",
+      "collaboration_events": 40,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-027",
+      "collaboration_events": 11,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-027",
+      "target_employee_id": "EMP-046",
+      "collaboration_events": 18,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-046",
+      "target_employee_id": "EMP-066",
+      "collaboration_events": 25,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-066",
+      "target_employee_id": "EMP-086",
+      "collaboration_events": 32,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-086",
+      "target_employee_id": "EMP-087",
+      "collaboration_events": 39,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-02",
+      "source_employee_id": "EMP-087",
+      "target_employee_id": "EMP-007",
+      "collaboration_events": 10,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-031",
+      "collaboration_events": 8,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-049",
+      "collaboration_events": 15,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-050",
+      "collaboration_events": 22,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-051",
+      "collaboration_events": 29,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-069",
+      "collaboration_events": 36,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-070",
+      "collaboration_events": 7,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-010",
+      "target_employee_id": "EMP-089",
+      "collaboration_events": 14,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-031",
+      "target_employee_id": "EMP-049",
+      "collaboration_events": 21,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-049",
+      "target_employee_id": "EMP-050",
+      "collaboration_events": 28,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-050",
+      "target_employee_id": "EMP-051",
+      "collaboration_events": 35,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-051",
+      "target_employee_id": "EMP-069",
+      "collaboration_events": 6,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-069",
+      "target_employee_id": "EMP-070",
+      "collaboration_events": 13,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-070",
+      "target_employee_id": "EMP-089",
+      "collaboration_events": 20,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-03",
+      "source_employee_id": "EMP-089",
+      "target_employee_id": "EMP-010",
+      "collaboration_events": 27,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-014",
+      "collaboration_events": 9,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-036",
+      "collaboration_events": 16,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-043",
+      "collaboration_events": 23,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-055",
+      "collaboration_events": 30,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-062",
+      "collaboration_events": 37,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-063",
+      "collaboration_events": 8,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-064",
+      "collaboration_events": 15,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-065",
+      "collaboration_events": 22,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-074",
+      "collaboration_events": 29,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-075",
+      "collaboration_events": 36,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-076",
+      "collaboration_events": 7,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-093",
+      "collaboration_events": 14,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-014",
+      "target_employee_id": "EMP-036",
+      "collaboration_events": 21,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-036",
+      "target_employee_id": "EMP-043",
+      "collaboration_events": 28,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-043",
+      "target_employee_id": "EMP-055",
+      "collaboration_events": 35,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-055",
+      "target_employee_id": "EMP-062",
+      "collaboration_events": 6,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-062",
+      "target_employee_id": "EMP-063",
+      "collaboration_events": 13,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-063",
+      "target_employee_id": "EMP-064",
+      "collaboration_events": 20,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-064",
+      "target_employee_id": "EMP-065",
+      "collaboration_events": 27,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-065",
+      "target_employee_id": "EMP-074",
+      "collaboration_events": 34,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-074",
+      "target_employee_id": "EMP-075",
+      "collaboration_events": 5,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-075",
+      "target_employee_id": "EMP-076",
+      "collaboration_events": 12,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-076",
+      "target_employee_id": "EMP-093",
+      "collaboration_events": 19,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-04",
+      "source_employee_id": "EMP-093",
+      "target_employee_id": "EMP-005",
+      "collaboration_events": 26,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-045",
+      "collaboration_events": 10,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-080",
+      "collaboration_events": 17,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-081",
+      "collaboration_events": 24,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-082",
+      "collaboration_events": 31,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-084",
+      "collaboration_events": 38,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-085",
+      "collaboration_events": 9,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-099",
+      "collaboration_events": 16,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-001",
+      "target_employee_id": "EMP-100",
+      "collaboration_events": 23,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-045",
+      "target_employee_id": "EMP-080",
+      "collaboration_events": 30,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-080",
+      "target_employee_id": "EMP-081",
+      "collaboration_events": 37,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-081",
+      "target_employee_id": "EMP-082",
+      "collaboration_events": 8,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-082",
+      "target_employee_id": "EMP-084",
+      "collaboration_events": 15,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-084",
+      "target_employee_id": "EMP-085",
+      "collaboration_events": 22,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-085",
+      "target_employee_id": "EMP-099",
+      "collaboration_events": 29,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-099",
+      "target_employee_id": "EMP-100",
+      "collaboration_events": 36,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-05",
+      "source_employee_id": "EMP-100",
+      "target_employee_id": "EMP-001",
+      "collaboration_events": 7,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-022",
+      "collaboration_events": 11,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-035",
+      "collaboration_events": 18,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-053",
+      "collaboration_events": 25,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-054",
+      "collaboration_events": 32,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-082",
+      "collaboration_events": 39,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-083",
+      "collaboration_events": 10,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-021",
+      "target_employee_id": "EMP-092",
+      "collaboration_events": 17,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-022",
+      "target_employee_id": "EMP-035",
+      "collaboration_events": 24,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-035",
+      "target_employee_id": "EMP-053",
+      "collaboration_events": 31,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-053",
+      "target_employee_id": "EMP-054",
+      "collaboration_events": 38,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-054",
+      "target_employee_id": "EMP-082",
+      "collaboration_events": 9,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-082",
+      "target_employee_id": "EMP-083",
+      "collaboration_events": 16,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-083",
+      "target_employee_id": "EMP-092",
+      "collaboration_events": 23,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-06",
+      "source_employee_id": "EMP-092",
+      "target_employee_id": "EMP-021",
+      "collaboration_events": 30,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-027",
+      "collaboration_events": 12,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-028",
+      "collaboration_events": 19,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-029",
+      "collaboration_events": 26,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-030",
+      "collaboration_events": 33,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-031",
+      "collaboration_events": 40,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-032",
+      "collaboration_events": 11,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-047",
+      "collaboration_events": 18,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-048",
+      "collaboration_events": 25,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-067",
+      "collaboration_events": 32,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-026",
+      "target_employee_id": "EMP-088",
+      "collaboration_events": 39,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-027",
+      "target_employee_id": "EMP-028",
+      "collaboration_events": 10,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-028",
+      "target_employee_id": "EMP-029",
+      "collaboration_events": 17,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-029",
+      "target_employee_id": "EMP-030",
+      "collaboration_events": 24,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-030",
+      "target_employee_id": "EMP-031",
+      "collaboration_events": 31,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-031",
+      "target_employee_id": "EMP-032",
+      "collaboration_events": 38,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-032",
+      "target_employee_id": "EMP-047",
+      "collaboration_events": 9,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-047",
+      "target_employee_id": "EMP-048",
+      "collaboration_events": 16,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-048",
+      "target_employee_id": "EMP-067",
+      "collaboration_events": 23,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-067",
+      "target_employee_id": "EMP-088",
+      "collaboration_events": 30,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-07",
+      "source_employee_id": "EMP-088",
+      "target_employee_id": "EMP-026",
+      "collaboration_events": 37,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-003",
+      "collaboration_events": 13,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-004",
+      "collaboration_events": 20,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-005",
+      "collaboration_events": 27,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-006",
+      "collaboration_events": 34,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-016",
+      "collaboration_events": 5,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-017",
+      "collaboration_events": 12,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-056",
+      "collaboration_events": 19,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-057",
+      "collaboration_events": 26,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-078",
+      "collaboration_events": 33,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-002",
+      "target_employee_id": "EMP-096",
+      "collaboration_events": 40,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-003",
+      "target_employee_id": "EMP-004",
+      "collaboration_events": 11,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-004",
+      "target_employee_id": "EMP-005",
+      "collaboration_events": 18,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-005",
+      "target_employee_id": "EMP-006",
+      "collaboration_events": 25,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-006",
+      "target_employee_id": "EMP-016",
+      "collaboration_events": 32,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-016",
+      "target_employee_id": "EMP-017",
+      "collaboration_events": 39,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-017",
+      "target_employee_id": "EMP-056",
+      "collaboration_events": 10,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-056",
+      "target_employee_id": "EMP-057",
+      "collaboration_events": 17,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-057",
+      "target_employee_id": "EMP-078",
+      "collaboration_events": 24,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-078",
+      "target_employee_id": "EMP-096",
+      "collaboration_events": 31,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-08",
+      "source_employee_id": "EMP-096",
+      "target_employee_id": "EMP-002",
+      "collaboration_events": 38,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-039",
+      "collaboration_events": 14,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-044",
+      "collaboration_events": 21,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-045",
+      "collaboration_events": 28,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-058",
+      "collaboration_events": 35,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-079",
+      "collaboration_events": 6,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-097",
+      "collaboration_events": 13,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-018",
+      "target_employee_id": "EMP-098",
+      "collaboration_events": 20,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-039",
+      "target_employee_id": "EMP-044",
+      "collaboration_events": 27,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-044",
+      "target_employee_id": "EMP-045",
+      "collaboration_events": 34,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-045",
+      "target_employee_id": "EMP-058",
+      "collaboration_events": 5,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-058",
+      "target_employee_id": "EMP-079",
+      "collaboration_events": 12,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-079",
+      "target_employee_id": "EMP-097",
+      "collaboration_events": 19,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-097",
+      "target_employee_id": "EMP-098",
+      "collaboration_events": 26,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-09",
+      "source_employee_id": "EMP-098",
+      "target_employee_id": "EMP-018",
+      "collaboration_events": 33,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-015",
+      "collaboration_events": 15,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-023",
+      "collaboration_events": 22,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-024",
+      "collaboration_events": 29,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-028",
+      "collaboration_events": 36,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-029",
+      "collaboration_events": 7,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-030",
+      "collaboration_events": 14,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-037",
+      "collaboration_events": 21,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-038",
+      "collaboration_events": 28,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-060",
+      "collaboration_events": 35,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-068",
+      "collaboration_events": 6,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-077",
+      "collaboration_events": 13,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-094",
+      "collaboration_events": 20,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-009",
+      "target_employee_id": "EMP-095",
+      "collaboration_events": 27,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-015",
+      "target_employee_id": "EMP-023",
+      "collaboration_events": 34,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-023",
+      "target_employee_id": "EMP-024",
+      "collaboration_events": 5,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-024",
+      "target_employee_id": "EMP-028",
+      "collaboration_events": 12,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-028",
+      "target_employee_id": "EMP-029",
+      "collaboration_events": 19,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-029",
+      "target_employee_id": "EMP-030",
+      "collaboration_events": 26,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-030",
+      "target_employee_id": "EMP-037",
+      "collaboration_events": 33,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-037",
+      "target_employee_id": "EMP-038",
+      "collaboration_events": 40,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-038",
+      "target_employee_id": "EMP-060",
+      "collaboration_events": 11,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-060",
+      "target_employee_id": "EMP-068",
+      "collaboration_events": 18,
+      "handoff_events": 15,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-068",
+      "target_employee_id": "EMP-077",
+      "collaboration_events": 25,
+      "handoff_events": 3,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-077",
+      "target_employee_id": "EMP-094",
+      "collaboration_events": 32,
+      "handoff_events": 6,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-094",
+      "target_employee_id": "EMP-095",
+      "collaboration_events": 39,
+      "handoff_events": 9,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-10",
+      "source_employee_id": "EMP-095",
+      "target_employee_id": "EMP-009",
+      "collaboration_events": 10,
+      "handoff_events": 12,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-040",
+      "collaboration_events": 16,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-041",
+      "collaboration_events": 23,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-059",
+      "collaboration_events": 30,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-061",
+      "collaboration_events": 37,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-082",
+      "collaboration_events": 8,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-099",
+      "collaboration_events": 15,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-019",
+      "target_employee_id": "EMP-100",
+      "collaboration_events": 22,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-040",
+      "target_employee_id": "EMP-041",
+      "collaboration_events": 29,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-041",
+      "target_employee_id": "EMP-059",
+      "collaboration_events": 36,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-059",
+      "target_employee_id": "EMP-061",
+      "collaboration_events": 7,
+      "handoff_events": 10,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-061",
+      "target_employee_id": "EMP-082",
+      "collaboration_events": 14,
+      "handoff_events": 13,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-082",
+      "target_employee_id": "EMP-099",
+      "collaboration_events": 21,
+      "handoff_events": 16,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-099",
+      "target_employee_id": "EMP-100",
+      "collaboration_events": 28,
+      "handoff_events": 4,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-11",
+      "source_employee_id": "EMP-100",
+      "target_employee_id": "EMP-019",
+      "collaboration_events": 35,
+      "handoff_events": 7,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-013",
+      "target_employee_id": "EMP-034",
+      "collaboration_events": 17,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-013",
+      "target_employee_id": "EMP-052",
+      "collaboration_events": 24,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-013",
+      "target_employee_id": "EMP-062",
+      "collaboration_events": 31,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-013",
+      "target_employee_id": "EMP-072",
+      "collaboration_events": 38,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-013",
+      "target_employee_id": "EMP-073",
+      "collaboration_events": 9,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-013",
+      "target_employee_id": "EMP-091",
+      "collaboration_events": 16,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.7
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-034",
+      "target_employee_id": "EMP-052",
+      "collaboration_events": 23,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.2
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-052",
+      "target_employee_id": "EMP-062",
+      "collaboration_events": 30,
+      "handoff_events": 5,
+      "mean_handoff_hours": 0.3
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-062",
+      "target_employee_id": "EMP-072",
+      "collaboration_events": 37,
+      "handoff_events": 8,
+      "mean_handoff_hours": 0.4
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-072",
+      "target_employee_id": "EMP-073",
+      "collaboration_events": 8,
+      "handoff_events": 11,
+      "mean_handoff_hours": 0.5
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-073",
+      "target_employee_id": "EMP-091",
+      "collaboration_events": 15,
+      "handoff_events": 14,
+      "mean_handoff_hours": 0.6
+    },
+    {
+      "workflow_id": "WF-12",
+      "source_employee_id": "EMP-091",
+      "target_employee_id": "EMP-013",
+      "collaboration_events": 22,
+      "handoff_events": 2,
+      "mean_handoff_hours": 0.7
+    }
+  ]
+}
