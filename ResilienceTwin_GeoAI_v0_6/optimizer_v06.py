@@ -103,8 +103,8 @@ def optimize_v06(scenario='SCN-SLOW',severity=None,policy='Balanced',db=DEFAULT_
         for b in facilities:
             paths[(a,b)]=network.path(a,b,blocked,slow,delay,'time')
     reasons=Counter()
-    def evaluate(shipment, state, occup):
-        det=details[shipment['id']];slot=slots[det['appointment_slot_id']]
+    def evaluate(shipment, state, occup, recovery_slot=None):
+        det=details[shipment['id']];slot=recovery_slot or slots[det['appointment_slot_id']]
         options=[]
         if occup[slot['slot_id']]>=slot['capacity']:
             return [],'No modeled receiving capacity in original appointment slot'
@@ -125,7 +125,8 @@ def optimize_v06(scenario='SCN-SLOW',severity=None,policy='Balanced',db=DEFAULT_
             finished=receive+turnaround_min
             drive=empty['minutes']+loaded['minutes']
             used_duty=finished-start
-            if receive>min(slot['window_end_min'],shipment['appointment_end_min']):continue
+            window_end = slot['window_end_min'] if recovery_slot else min(slot['window_end_min'], shipment['appointment_end_min'])
+            if receive > window_end:continue
             if finished>profile['shift_end_min']:continue
             # Simplified remaining shift budget. Waiting counts toward duty time.
             budget=int(profile['hours_remaining']*60)
@@ -156,6 +157,15 @@ def optimize_v06(scenario='SCN-SLOW',severity=None,policy='Balanced',db=DEFAULT_
                 drive,used_duty))
         return options,'No time-feasible truck/driver/route combination'
 
+    def reserve(record, drive, duty, state, occupancy):
+        truck = state[record['truck_id']]
+        truck['location'] = record['destination_id']
+        truck['available'] = record['complete_min']
+        truck['trips'] += 1
+        truck['duty_used'] += duty
+        truck['drive_used'] += drive
+        occupancy[record['slot_id']] += 1
+
     best=None
     for trial in range(attempts):
         # Deterministic alternative orderings to reduce dependence on one greedy pass.
@@ -178,10 +188,8 @@ def optimize_v06(scenario='SCN-SLOW',severity=None,policy='Balanced',db=DEFAULT_
         for sh in ordered:
             opts,reason=evaluate(sh,state,occupancy)
             if opts:
-                _,rec,drive,duty=min(opts,key=lambda z:z[0]);tid=rec['truck_id']
-                s=state[tid];s['location']=sh['destination_id'];s['available']=rec['complete_min']
-                s['duty_used']+=duty;s['drive_used']+=drive;s['trips']+=1
-                occupancy[rec['slot_id']]+=1
+                _,rec,drive,duty=min(opts,key=lambda z:z[0])
+                reserve(rec, drive, duty, state, occupancy)
                 output[sh['id']]=rec
             else:
                 output[sh['id']]={'shipment_id':sh['id'],'priority':details[sh['id']]['priority'],
@@ -195,10 +203,34 @@ def optimize_v06(scenario='SCN-SLOW',severity=None,policy='Balanced',db=DEFAULT_
         tie=({'Lowest cost':dollars,'Lowest CO2':carbon,'Reliability first':sum(x['receiving_min'] for x in scheduled),
               'Balanced':dollars/300+.7*carbon/150}[policy])
         ranking=(score,len(scheduled),-tie)
-        if best is None or ranking>best[0]:best=(ranking,recs,trial)
+        if best is None or ranking>best[0]:best=(ranking,recs,trial,state,occupancy)
     records=best[1];selected=[r for r in records if r['status']=='scheduled']
     for x in records:
         if x['status']=='unassigned':reasons[x['notes'][0]]+=1
+    # Build a provisional recovery plan after the committed trips.
+    state, occupancy = best[3], best[4]
+    shipment_by_id = {shipment['id']: shipment for shipment in shipments}
+    unassigned = sorted((record for record in records if record['status'] == 'unassigned'),
+                        key=lambda record: (-PRIORITY_WEIGHTS.get(record['priority'], 1),
+                                            record['shipment_id']))
+    for record in unassigned:
+        shipment = shipment_by_id[record['shipment_id']]
+        candidates = []
+        for slot in slots.values():
+            if (slot['warehouse_id'] == shipment['destination_id']
+                    and slot['window_end_min'] > shipment['appointment_end_min']):
+                options, _ = evaluate(shipment, state, occupancy, slot)
+                candidates.extend(option for option in options
+                                  if option[1]['receiving_min'] > shipment['appointment_end_min'])
+        if candidates:
+            _, recovery, drive, duty = min(
+                candidates, key=lambda option: (option[1]['receiving_min'], option[0])
+            )
+            reserve(recovery, drive, duty, state, occupancy)
+            record['recovery'] = {
+                key: recovery[key] for key in ('arrival_min', 'receiving_min', 'slot_id', 'truck_id')
+            }
+
     coverage=len(selected)/max(1,len(records))
     metrics={'shipments':len(records),'scheduled':len(selected),'unassigned':len(records)-len(selected),
        'coverage_pct':round(100*coverage,1),'priority_service_score':sum(PRIORITY_WEIGHTS.get(x['priority'],1) for x in selected),

@@ -224,6 +224,14 @@ for trip in result['shipments']:
             if 'receiving capacity' in impact.lower()
             else 'Check truck, driver, and route availability, then confirm a receiving window.'
         )
+    recovery = trip.get('recovery')
+    if recovery:
+        next_step = f"Confirm proposed slot {recovery['slot_id']} with the warehouse."
+        eta = f"Scenario minute {recovery['arrival_min']} (proposed)"
+    elif trip['status'] == 'scheduled':
+        eta = f"Scenario minute {trip['arrival_min']}"
+    else:
+        eta = 'No feasible ETA in modeled windows'
     previous = baseline_shipments[shipment]
     contact = contacts[trip['destination_id']]
     exceptions.append({
@@ -233,14 +241,14 @@ for trip in result['shipments']:
         'Original window (scenario min)': f"{slot['window_start_min']}–{slot['window_end_min']}",
         'Baseline status': previous['status'].capitalize(),
         'Modeled impact': impact, 'Next step': next_step,
-        'Revised ETA': f"Scenario minute {trip['arrival_min']}" if trip['status'] == 'scheduled'
-                       else 'Pending a feasible assignment',
+        'Revised ETA': eta,
+        'Proposed receiving minute': recovery['receiving_min'] if recovery else None,
     })
 
 outbox = st.session_state.setdefault('customer_outbox', {})
 if exceptions:
     for row in exceptions:
-        row['Contacted stop'] = (row['Stop'], row['Shipment'], scenario, row['Modeled impact']) in outbox
+        row['Contacted stop'] = (row['Stop'], row['Shipment'], scenario, row['Modeled impact'], row['Revised ETA'], row['Next step']) in outbox
     st.dataframe(pd.DataFrame(exceptions), hide_index=True)
     stop = st.selectbox('Prepare a notice for',
                         sorted({row['Stop'] for row in exceptions}),
@@ -267,7 +275,7 @@ if exceptions:
         "ResilienceTwin Dispatch Demo"
     )
     st.text(notice)
-    notice_keys = {(stop, row['Shipment'], scenario, row['Modeled impact']) for row in stop_rows}
+    notice_keys = {(stop, row['Shipment'], scenario, row['Modeled impact'], row['Revised ETA'], row['Next step']) for row in stop_rows}
     sent = notice_keys.issubset(outbox)
     if st.button('Send delay email (demo)', disabled=sent):
         for key in notice_keys:
