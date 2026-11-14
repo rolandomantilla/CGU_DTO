@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ResilienceTwin ArcGIS map</title>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.34/esri/themes/light/main.css">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    body { display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+      font: 13px system-ui, sans-serif; color: #183047; border: 1px solid #ccd7e1;
+      border-radius: 8px; box-sizing: border-box; overflow: hidden; background: #fff; }
+    #controls, #legend { padding: 8px 10px; display: flex; align-items: center;
+      flex-wrap: wrap; gap: 8px 14px; }
+    #controls { border-bottom: 1px solid #ccd7e1; }
+    #legend { border-top: 1px solid #ccd7e1; }
+    #map-status, #traffic-status { flex-basis: 100%; }
+    label { display: inline-flex; align-items: center; gap: 4px; }
+    select { padding: 3px; font: inherit; }
+    .mark { display: inline-block; margin-right: 5px; width: 10px; height: 10px;
+      border-radius: 50%; background: var(--color); }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <label>View <select id="view-mode">
+      <option value="2d">2D streets</option><option value="3d">3D city</option>
+    </select></label>
+    <label>Focus <select id="focus">
+      <option value="region">Southern California</option>
+      <option value="la">Downtown Los Angeles</option>
+      <option value="lb">Downtown Long Beach</option>
+      <option value="ontario">Downtown Ontario</option>
+    </select></label>
+    <label><input id="routes" type="checkbox" checked> Road routes</label>
+    <label><input id="closures" type="checkbox" checked> Caltrans closures</label>
+    <label><input id="speeds" type="checkbox" disabled> Esri traffic speeds</label>
+  </div>
+  <div id="view" aria-label="ArcGIS map"></div>
+  <div id="legend">
+    <span><span class="mark" style="--color:#1763ab"></span>Port or warehouse</span>
+    <span><span class="mark" style="--color:#7352a8"></span>All modeled on time</span>
+    <span><span class="mark" style="--color:#a22066"></span>Some modeled late</span>
+    <span><span class="mark" style="--color:#b8490c"></span>Active closure</span>
+    <span>Routing © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> ·
+      <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener">Fix the map</a></span>
+    <span id="map-status" role="status">Loading ArcGIS…</span>
+    <span id="traffic-status" role="status"></span>
+  </div>
+  <script id="map-data" type="application/json">__MAP_DATA__</script>
+  <script src="https://js.arcgis.com/4.34/"></script>
+  <script>
+    const data = JSON.parse(document.getElementById("map-data").textContent);
+    const mode = document.getElementById("view-mode");
+    const focus = document.getElementById("focus");
+    const showRoutes = document.getElementById("routes");
+    const showClosures = document.getElementById("closures");
+    const showSpeeds = document.getElementById("speeds");
+    const mapStatus = document.getElementById("map-status");
+    const trafficStatus = document.getElementById("traffic-status");
+    const places = {
+      region: { center: [-117.94, 33.94], zoom: 9 },
+      la: { center: [-118.252, 34.048], zoom: 15 },
+      lb: { center: [-118.193, 33.771], zoom: 15 },
+      ontario: { center: [-117.65, 34.064], zoom: 15 }
+    };
+    const streetService = "https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer";
+    const buildingService = "https://basemaps3d.arcgis.com/arcgis/rest/services/Esri3D_Buildings_v1/SceneServer/layers/0";
+    const trafficService = "https://traffic.arcgis.com/arcgis/rest/services/World/Traffic/MapServer";
+
+    async function loadClosures(district) {
+      const response = await fetch(
+        `https://cwwp2.dot.ca.gov/data/d${district}/lcs/lcsStatusD${String(district).padStart(2, "0")}.json`,
+        { cache: "no-cache", signal: AbortSignal.timeout(15000) }
+      );
+      if (!response.ok) throw new Error("Caltrans feed unavailable");
+      const payload = await response.json();
+      return payload.data.map(({ lcs }) => lcs).filter(({ closure }) =>
+        String(closure.code1097?.isCode1097) === "true" &&
+        String(closure.code1098?.isCode1098) !== "true" &&
+        String(closure.code1022?.isCode1022) !== "true"
+      );
+    }
+
+    if (typeof require !== "function") {
+      mapStatus.textContent = "ArcGIS could not load. Check your internet connection and reload the page.";
+    } else {
+      require([
+        "esri/Map", "esri/Basemap", "esri/views/MapView", "esri/views/SceneView",
+        "esri/layers/TileLayer", "esri/layers/SceneLayer", "esri/layers/MapImageLayer",
+        "esri/layers/GraphicsLayer", "esri/Graphic", "esri/config"
+      ], (Map, Basemap, MapView, SceneView, TileLayer, SceneLayer, MapImageLayer,
+          GraphicsLayer, Graphic, config) => {
+        config.request.useIdentity = false;
+        const marker = (color, size) => ({
+          type: "simple-marker", color, size, outline: { color: "white", width: 1.3 }
+        });
+        const point = (longitude, latitude) => ({
+          type: "point", longitude, latitude
+        });
+        const facilities = new GraphicsLayer({ title: "Ports and warehouses" });
+        const routes = new GraphicsLayer({ title: "Road-network shipment routes" });
+        const closures = new GraphicsLayer({ title: "Caltrans active closures" });
+        facilities.addMany(data.facilities.map(facility => new Graphic({
+          geometry: point(facility.lon, facility.lat),
+          symbol: marker("#1763ab", 9),
+          attributes: { name: facility.name, kind: facility.kind, id: facility.id },
+          popupTemplate: { title: "{name}", content: "Modeled {kind} · {id}" }
+        })));
+        routes.addMany(data.routes.map(route => new Graphic({
+          geometry: { type: "polyline", paths: [route.coordinates], spatialReference: { wkid: 4326 } },
+          symbol: { type: "simple-line", color: route.attributes.late ? "#a22066" : "#7352a8", width: 2 },
+          attributes: route.attributes,
+          popupTemplate: {
+            title: "{origin} → {destination}",
+            content: [{ type: "fields", fieldInfos: [
+              { fieldName: "variant", label: "Road path" },
+              { fieldName: "miles", label: "Mapped road miles" },
+              { fieldName: "shipments", label: "Modeled shipments" },
+              { fieldName: "late", label: "Modeled late shipments" }
+            ] }]
+          }
+        })));
+
+        const streetLayer = new TileLayer({ url: streetService });
+        const map = new Map({ basemap: new Basemap({ baseLayers: [streetLayer] }),
+          layers: [routes, facilities, closures] });
+        const buildings = new SceneLayer({ url: buildingService, title: "Esri 3D Buildings",
+          popupEnabled: false });
+        let speeds;
+        if (data.trafficKey) {
+          speeds = new MapImageLayer({
+            url: trafficService, apiKey: data.trafficKey, title: "Esri World Traffic",
+            imageFormat: "png32", useViewTime: false, refreshInterval: 5, visible: false
+          });
+          map.add(speeds, 0);
+          showSpeeds.disabled = false;
+          showSpeeds.onchange = () => {
+            speeds.visible = showSpeeds.checked;
+            if (!speeds.visible) return;
+            speeds.load().catch(() => {
+              speeds.visible = false;
+              showSpeeds.checked = false;
+              mapStatus.textContent = "Esri traffic speeds unavailable. Check the key and World Traffic access.";
+            });
+          };
+        } else {
+          showSpeeds.parentElement.title = "Set ARCGIS_TRAFFIC_API_KEY to enable Esri World Traffic.";
+        }
+
+        showRoutes.onchange = () => { routes.visible = showRoutes.checked; };
+        showClosures.onchange = () => { closures.visible = showClosures.checked; };
+
+        async function refreshClosures() {
+          const districts = [7, 8, 12];
+          const feeds = await Promise.allSettled(districts.map(loadClosures));
+          const unavailable = [];
+          const markers = [];
+          for (const [index, feed] of feeds.entries()) {
+            if (feed.status === "rejected") {
+              unavailable.push(districts[index]);
+              continue;
+            }
+            for (const { closure, location } of feed.value) {
+              const start = location?.begin;
+              const longitude = Number(start?.beginLongitude);
+              const latitude = Number(start?.beginLatitude);
+              if (!(longitude > -125 && longitude < -113 && latitude > 32 && latitude < 42)) continue;
+              markers.push(new Graphic({
+                geometry: point(longitude, latitude),
+                symbol: marker("#b8490c", 9),
+                attributes: {
+                  road: start.beginRoute, direction: location.travelFlowDirection,
+                  place: start.beginLocationName, town: start.beginNearbyPlace,
+                  type: closure.typeOfClosure, work: closure.typeOfWork,
+                  delay: closure.estimatedDelay || "Not reported"
+                },
+                popupTemplate: {
+                  title: "Caltrans · {road} {direction}",
+                  content: [{ type: "fields", fieldInfos: [
+                    { fieldName: "place", label: "Closure start" },
+                    { fieldName: "town", label: "Nearby" },
+                    { fieldName: "type", label: "Closure type" },
+                    { fieldName: "work", label: "Work" },
+                    { fieldName: "delay", label: "Reported delay" }
+                  ] }]
+                }
+              }));
+            }
+          }
+          closures.removeAll();
+          closures.addMany(markers);
+          const time = new Intl.DateTimeFormat("en-US", {
+            timeZone: "America/Los_Angeles", hour: "numeric", minute: "2-digit", timeZoneName: "short"
+          }).format(new Date());
+          const summary = `Caltrans: ${markers.length} mapped active closures · checked ${time}`;
+          trafficStatus.textContent = unavailable.length === districts.length
+            ? "Caltrans closure feed unavailable. Retrying in five minutes."
+            : summary + (unavailable.length ? ` · unavailable districts: ${unavailable.join(", ")}` : "");
+        }
+
+        let view;
+        async function changeView(use3D) {
+          mode.disabled = true;
+          focus.disabled = true;
+          mapStatus.textContent = use3D ? "Loading 3D city view…" : "Loading ArcGIS streets…";
+          if (view) {
+            view.map = null;
+            view.destroy();
+          }
+          map.remove(buildings);
+          if (use3D) map.add(buildings, 0);
+          const { center, zoom } = places[focus.value];
+          const options = { map, container: "view", center, zoom };
+          view = use3D ? new SceneView({ ...options, qualityProfile: "low" }) : new MapView(options);
+          try {
+            await view.when();
+            if (use3D) await view.goTo({ center, zoom, tilt: 58 }, { animate: false });
+            mapStatus.textContent = "";
+            if (use3D) {
+              buildings.load().catch(() => {
+                if (mode.value === "3d") mapStatus.textContent = "Esri 3D buildings could not load.";
+              });
+            }
+          } catch {
+            mapStatus.textContent = use3D
+              ? "3D is unavailable in this browser. Select 2D streets to return to the map."
+              : "ArcGIS streets could not load. Check your internet connection and reload.";
+          } finally {
+            mode.disabled = false;
+            focus.disabled = false;
+          }
+        }
+
+        mode.onchange = () => {
+          if (mode.value === "3d" && focus.value === "region") focus.value = "la";
+          changeView(mode.value === "3d");
+        };
+        focus.onchange = () => {
+          const viewpoint = { ...places[focus.value] };
+          if (mode.value === "3d") viewpoint.tilt = focus.value === "region" ? 0 : 58;
+          view.goTo(viewpoint).catch(() => {});
+        };
+        refreshClosures();
+        setInterval(refreshClosures, 5 * 60 * 1000);
+        changeView(false);
+      }, () => {
+        mapStatus.textContent = "ArcGIS modules could not load. Check your internet connection and reload.";
+      });
+    }
+  </script>
+</body>
+</html>
