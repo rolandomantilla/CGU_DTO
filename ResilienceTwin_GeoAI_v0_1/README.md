@@ -2,6 +2,35 @@
 
 Prototype for the **Resilience, Cost, and Sustainability Intelligence** perspective in the GeoAI Track assignment.
 
+## macOS quick start
+
+1. Double-click the ZIP in Finder to extract it. Keep the extracted project in its own folder.
+2. Open **Terminal** with **Command + Space**, then type `Terminal` and press **Return**.
+3. Go to the extracted folder. If you extracted it in Downloads, run:
+
+   ```bash
+   cd "$HOME/Downloads/ResilienceTwin_GeoAI_v0_1"
+   ```
+
+   If the folder is elsewhere or Finder added a suffix to its name, type `cd ` (with a trailing space), drag the extracted folder from Finder into Terminal, and press **Return**.
+
+4. Check that `python3 --version` reports Python 3.11 or newer. If needed, install Python from [python.org](https://www.python.org/downloads/macos/) and reopen Terminal. Run these setup commands once:
+
+   ```bash
+   python3 -m venv .venv
+   .venv/bin/python -m pip install -r requirements.txt
+   ```
+
+5. Start the app:
+
+   ```bash
+   .venv/bin/python -m streamlit run app.py --server.address 127.0.0.1 --server.port 8501
+   ```
+
+6. Open [http://127.0.0.1:8501/](http://127.0.0.1:8501/) in your browser. If port 8501 is already in use, change `--server.port 8501` to `--server.port 8502` and open [http://127.0.0.1:8502/](http://127.0.0.1:8502/).
+
+Keep Terminal open while using the app. Press **Control + C** to stop it. To launch it next time, open Terminal, return to the project folder, and repeat step 5. The ZIP includes the demo database and road-route data, so you can launch directly after installing dependencies.
+
 ## Windows / VS Code quick start
 
 1. Extract this ZIP into its **own folder**, not directly over the existing `CGU_DTO` repository.
