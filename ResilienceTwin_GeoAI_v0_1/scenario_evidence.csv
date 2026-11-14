@@ -1,0 +1,5 @@
+Scenario,Response,Shipment count,At-risk deliveries,On-time %,Cost USD (synthetic),Total miles (modeled),CO2 kg (estimated),Late minutes,Community exposure proxy
+Normal,Stay on primary,40,0,100.0,5983.49,1616.0,2702.44,0,2.0
+Highway slowdown,Stay on primary,40,24,40.0,8636.99,1616.0,2896.8,1097,2.0
+Highway slowdown,Use alternate route,40,10,75.0,7470.6,1923.6,3242.28,154,3.71
+Highway slowdown,Expedite dispatch,40,7,82.5,10205.99,1616.0,2799.6,79,2.0
