@@ -1,0 +1,4 @@
+﻿param_id,mode,value,unit,scenario_basis,confidence
+E-MILE,diesel_truck,1.65,kg CO2/mile,v0.1 engine constant,illustrative
+E-IDLE,diesel_truck,0.09,kg CO2/min added,v0.1 engine constant,illustrative
+E-FUEL,diesel_truck,10.21,kg CO2/gallon,v0.2 planning assumption (not used by v0.1),illustrative

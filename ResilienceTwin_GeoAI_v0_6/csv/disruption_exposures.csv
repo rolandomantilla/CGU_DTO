@@ -1,0 +1,6 @@
+﻿disruption_id,segment_id,severity_factor,source
+DIS-001,S-004,1.0,simulated
+DIS-002,S-004,1.0,simulated
+DIS-003,S-001,0.4,simulated
+DIS-004,S-005,0.9,simulated
+DIS-005,S-003,0.85,simulated

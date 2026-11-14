@@ -1,0 +1,2 @@
+﻿audit_id,scenario_id,action_id,reviewer_person_id,decision_status,reason,created_at_utc
+AUDIT-001,SCN-SLOW,ACT-ALT,PERSON-013,pending_review,Illustrative dispatcher review: compare reliability and emissions before accepting,2026-11-14T17:00:00Z

@@ -1,0 +1,6 @@
+﻿action_id,action_type,description,requires_approval,estimated_setup_min
+ACT-STAY,stay_primary,No routing change; reassess appointment,1,0
+ACT-ALT,reroute,Evaluate alternate illustrative route,1,15
+ACT-EXP,expedite,Prioritize pickup and dispatch,1,10
+ACT-RES,reschedule,Request a new receiving appointment,1,30
+ACT-SWAP,reassign,Consider another available truck and driver,1,25

@@ -1,0 +1,7 @@
+﻿scenario_id,name,kind,severity_min,affected_segment_id,confidence,description
+SCN-NORMAL,Normal,normal,0,,synthetic,No disruption
+SCN-SLOW,Highway slowdown,traffic,75,S-004,synthetic,Modeled inland delay
+SCN-CLOSE,Highway closure,road_closure,150,S-004,synthetic,Modeled segment closure
+SCN-PICKUP,Pickup delay,port,90,,synthetic,Containers not ready
+SCN-FIRE,Wildfire disruption,wildfire,110,S-005,synthetic,Illustrative wildfire route exposure
+SCN-FLOOD,Flooding disruption,flood,120,S-003,synthetic,Illustrative flooding route exposure

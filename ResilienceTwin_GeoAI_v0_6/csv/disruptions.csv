@@ -1,0 +1,6 @@
+﻿id,kind,description,delay_min,confidence
+DIS-001,slowdown,Illustrative freeway slowdown,75,simulated
+DIS-002,closure,Illustrative highway closure,150,simulated
+DIS-003,pickup,Illustrative pickup delay,90,simulated
+DIS-004,wildfire,Illustrative wildfire-related route disruption,110,simulated
+DIS-005,flood,Illustrative flood-related route disruption,120,simulated

@@ -1,0 +1,101 @@
+﻿person_id,display_name,role,facility_id,skill_level,shift_code,availability,backup_person_id,driver_id,fictional
+PERSON-001,Synthetic Staff 001,Truck Driver,PORT-LA,2,PM,available,PERSON-002,DRIVER-01,1
+PERSON-002,Synthetic Staff 002,Truck Driver,PORT-LB,3,NIGHT,available,PERSON-003,DRIVER-02,1
+PERSON-003,Synthetic Staff 003,Truck Driver,WH-CAR,4,AM,available,PERSON-004,DRIVER-03,1
+PERSON-004,Synthetic Staff 004,Truck Driver,WH-COM,5,PM,available,PERSON-005,DRIVER-04,1
+PERSON-005,Synthetic Staff 005,Truck Driver,WH-FON,1,NIGHT,available,PERSON-006,DRIVER-05,1
+PERSON-006,Synthetic Staff 006,Truck Driver,WH-ONT,2,AM,available,PERSON-007,DRIVER-06,1
+PERSON-007,Synthetic Staff 007,Truck Driver,WH-RIV,3,PM,available,PERSON-008,DRIVER-07,1
+PERSON-008,Synthetic Staff 008,Truck Driver,PORT-LA,4,NIGHT,available,PERSON-009,DRIVER-08,1
+PERSON-009,Synthetic Staff 009,Truck Driver,PORT-LB,5,AM,available,PERSON-010,DRIVER-09,1
+PERSON-010,Synthetic Staff 010,Truck Driver,WH-CAR,1,PM,available,PERSON-011,DRIVER-10,1
+PERSON-011,Synthetic Staff 011,Truck Driver,WH-COM,2,NIGHT,on_leave,PERSON-012,DRIVER-11,1
+PERSON-012,Synthetic Staff 012,Truck Driver,WH-FON,3,AM,available,PERSON-013,DRIVER-12,1
+PERSON-013,Synthetic Staff 013,Warehouse Coordinator,WH-ONT,4,PM,available,PERSON-014,,1
+PERSON-014,Synthetic Staff 014,Fleet Mechanic,WH-RIV,5,NIGHT,available,PERSON-015,,1
+PERSON-015,Synthetic Staff 015,Operations Analyst,PORT-LA,1,AM,available,PERSON-016,,1
+PERSON-016,Synthetic Staff 016,Safety Officer,PORT-LB,2,PM,available,PERSON-017,,1
+PERSON-017,Synthetic Staff 017,GIS Analyst,WH-CAR,3,NIGHT,available,PERSON-018,,1
+PERSON-018,Synthetic Staff 018,Supply Chain Planner,WH-COM,4,AM,available,PERSON-019,,1
+PERSON-019,Synthetic Staff 019,Security Specialist,WH-FON,5,PM,available,PERSON-020,,1
+PERSON-020,Synthetic Staff 020,Receiving Specialist,WH-ONT,1,NIGHT,available,PERSON-021,,1
+PERSON-021,Synthetic Staff 021,Logistics Manager,WH-RIV,2,AM,available,PERSON-022,,1
+PERSON-022,Synthetic Staff 022,Warehouse Coordinator,PORT-LA,3,PM,on_leave,PERSON-023,,1
+PERSON-023,Synthetic Staff 023,Fleet Mechanic,PORT-LB,4,NIGHT,available,PERSON-024,,1
+PERSON-024,Synthetic Staff 024,Operations Analyst,WH-CAR,5,AM,available,PERSON-025,,1
+PERSON-025,Synthetic Staff 025,Safety Officer,WH-COM,1,PM,available,PERSON-026,,1
+PERSON-026,Synthetic Staff 026,GIS Analyst,WH-FON,2,NIGHT,available,PERSON-027,,1
+PERSON-027,Synthetic Staff 027,Supply Chain Planner,WH-ONT,3,AM,available,PERSON-028,,1
+PERSON-028,Synthetic Staff 028,Security Specialist,WH-RIV,4,PM,available,PERSON-029,,1
+PERSON-029,Synthetic Staff 029,Receiving Specialist,PORT-LA,5,NIGHT,available,PERSON-030,,1
+PERSON-030,Synthetic Staff 030,Logistics Manager,PORT-LB,1,AM,available,PERSON-031,,1
+PERSON-031,Synthetic Staff 031,Warehouse Coordinator,WH-CAR,2,PM,available,PERSON-032,,1
+PERSON-032,Synthetic Staff 032,Fleet Mechanic,WH-COM,3,NIGHT,available,PERSON-033,,1
+PERSON-033,Synthetic Staff 033,Operations Analyst,WH-FON,4,AM,on_leave,PERSON-034,,1
+PERSON-034,Synthetic Staff 034,Safety Officer,WH-ONT,5,PM,available,PERSON-035,,1
+PERSON-035,Synthetic Staff 035,GIS Analyst,WH-RIV,1,NIGHT,available,PERSON-036,,1
+PERSON-036,Synthetic Staff 036,Supply Chain Planner,PORT-LA,2,AM,available,PERSON-037,,1
+PERSON-037,Synthetic Staff 037,Security Specialist,PORT-LB,3,PM,available,PERSON-038,,1
+PERSON-038,Synthetic Staff 038,Receiving Specialist,WH-CAR,4,NIGHT,available,PERSON-039,,1
+PERSON-039,Synthetic Staff 039,Logistics Manager,WH-COM,5,AM,available,PERSON-040,,1
+PERSON-040,Synthetic Staff 040,Warehouse Coordinator,WH-FON,1,PM,available,PERSON-041,,1
+PERSON-041,Synthetic Staff 041,Fleet Mechanic,WH-ONT,2,NIGHT,available,PERSON-042,,1
+PERSON-042,Synthetic Staff 042,Operations Analyst,WH-RIV,3,AM,available,PERSON-043,,1
+PERSON-043,Synthetic Staff 043,Safety Officer,PORT-LA,4,PM,available,PERSON-044,,1
+PERSON-044,Synthetic Staff 044,GIS Analyst,PORT-LB,5,NIGHT,on_leave,PERSON-045,,1
+PERSON-045,Synthetic Staff 045,Supply Chain Planner,WH-CAR,1,AM,available,PERSON-046,,1
+PERSON-046,Synthetic Staff 046,Security Specialist,WH-COM,2,PM,available,PERSON-047,,1
+PERSON-047,Synthetic Staff 047,Receiving Specialist,WH-FON,3,NIGHT,available,PERSON-048,,1
+PERSON-048,Synthetic Staff 048,Logistics Manager,WH-ONT,4,AM,available,PERSON-049,,1
+PERSON-049,Synthetic Staff 049,Warehouse Coordinator,WH-RIV,5,PM,available,PERSON-050,,1
+PERSON-050,Synthetic Staff 050,Fleet Mechanic,PORT-LA,1,NIGHT,available,PERSON-051,,1
+PERSON-051,Synthetic Staff 051,Operations Analyst,PORT-LB,2,AM,available,PERSON-052,,1
+PERSON-052,Synthetic Staff 052,Safety Officer,WH-CAR,3,PM,available,PERSON-053,,1
+PERSON-053,Synthetic Staff 053,GIS Analyst,WH-COM,4,NIGHT,available,PERSON-054,,1
+PERSON-054,Synthetic Staff 054,Supply Chain Planner,WH-FON,5,AM,available,PERSON-055,,1
+PERSON-055,Synthetic Staff 055,Security Specialist,WH-ONT,1,PM,on_leave,PERSON-056,,1
+PERSON-056,Synthetic Staff 056,Receiving Specialist,WH-RIV,2,NIGHT,available,PERSON-057,,1
+PERSON-057,Synthetic Staff 057,Logistics Manager,PORT-LA,3,AM,available,PERSON-058,,1
+PERSON-058,Synthetic Staff 058,Warehouse Coordinator,PORT-LB,4,PM,available,PERSON-059,,1
+PERSON-059,Synthetic Staff 059,Fleet Mechanic,WH-CAR,5,NIGHT,available,PERSON-060,,1
+PERSON-060,Synthetic Staff 060,Operations Analyst,WH-COM,1,AM,available,PERSON-061,,1
+PERSON-061,Synthetic Staff 061,Safety Officer,WH-FON,2,PM,available,PERSON-062,,1
+PERSON-062,Synthetic Staff 062,GIS Analyst,WH-ONT,3,NIGHT,available,PERSON-063,,1
+PERSON-063,Synthetic Staff 063,Supply Chain Planner,WH-RIV,4,AM,available,PERSON-064,,1
+PERSON-064,Synthetic Staff 064,Security Specialist,PORT-LA,5,PM,available,PERSON-065,,1
+PERSON-065,Synthetic Staff 065,Receiving Specialist,PORT-LB,1,NIGHT,available,PERSON-066,,1
+PERSON-066,Synthetic Staff 066,Logistics Manager,WH-CAR,2,AM,on_leave,PERSON-067,,1
+PERSON-067,Synthetic Staff 067,Warehouse Coordinator,WH-COM,3,PM,available,PERSON-068,,1
+PERSON-068,Synthetic Staff 068,Fleet Mechanic,WH-FON,4,NIGHT,available,PERSON-069,,1
+PERSON-069,Synthetic Staff 069,Operations Analyst,WH-ONT,5,AM,available,PERSON-070,,1
+PERSON-070,Synthetic Staff 070,Safety Officer,WH-RIV,1,PM,available,PERSON-071,,1
+PERSON-071,Synthetic Staff 071,GIS Analyst,PORT-LA,2,NIGHT,available,PERSON-072,,1
+PERSON-072,Synthetic Staff 072,Supply Chain Planner,PORT-LB,3,AM,available,PERSON-073,,1
+PERSON-073,Synthetic Staff 073,Security Specialist,WH-CAR,4,PM,available,PERSON-074,,1
+PERSON-074,Synthetic Staff 074,Receiving Specialist,WH-COM,5,NIGHT,available,PERSON-075,,1
+PERSON-075,Synthetic Staff 075,Logistics Manager,WH-FON,1,AM,available,PERSON-076,,1
+PERSON-076,Synthetic Staff 076,Warehouse Coordinator,WH-ONT,2,PM,available,PERSON-077,,1
+PERSON-077,Synthetic Staff 077,Fleet Mechanic,WH-RIV,3,NIGHT,on_leave,PERSON-078,,1
+PERSON-078,Synthetic Staff 078,Operations Analyst,PORT-LA,4,AM,available,PERSON-079,,1
+PERSON-079,Synthetic Staff 079,Safety Officer,PORT-LB,5,PM,available,PERSON-080,,1
+PERSON-080,Synthetic Staff 080,GIS Analyst,WH-CAR,1,NIGHT,available,PERSON-081,,1
+PERSON-081,Synthetic Staff 081,Supply Chain Planner,WH-COM,2,AM,available,PERSON-082,,1
+PERSON-082,Synthetic Staff 082,Security Specialist,WH-FON,3,PM,available,PERSON-083,,1
+PERSON-083,Synthetic Staff 083,Receiving Specialist,WH-ONT,4,NIGHT,available,PERSON-084,,1
+PERSON-084,Synthetic Staff 084,Logistics Manager,WH-RIV,5,AM,available,PERSON-085,,1
+PERSON-085,Synthetic Staff 085,Warehouse Coordinator,PORT-LA,1,PM,available,PERSON-086,,1
+PERSON-086,Synthetic Staff 086,Fleet Mechanic,PORT-LB,2,NIGHT,available,PERSON-087,,1
+PERSON-087,Synthetic Staff 087,Operations Analyst,WH-CAR,3,AM,available,PERSON-088,,1
+PERSON-088,Synthetic Staff 088,Safety Officer,WH-COM,4,PM,on_leave,PERSON-089,,1
+PERSON-089,Synthetic Staff 089,GIS Analyst,WH-FON,5,NIGHT,available,PERSON-090,,1
+PERSON-090,Synthetic Staff 090,Supply Chain Planner,WH-ONT,1,AM,available,PERSON-091,,1
+PERSON-091,Synthetic Staff 091,Security Specialist,WH-RIV,2,PM,available,PERSON-092,,1
+PERSON-092,Synthetic Staff 092,Receiving Specialist,PORT-LA,3,NIGHT,available,PERSON-093,,1
+PERSON-093,Synthetic Staff 093,Logistics Manager,PORT-LB,4,AM,available,PERSON-094,,1
+PERSON-094,Synthetic Staff 094,Warehouse Coordinator,WH-CAR,5,PM,available,PERSON-095,,1
+PERSON-095,Synthetic Staff 095,Fleet Mechanic,WH-COM,1,NIGHT,available,PERSON-096,,1
+PERSON-096,Synthetic Staff 096,Operations Analyst,WH-FON,2,AM,available,PERSON-097,,1
+PERSON-097,Synthetic Staff 097,Safety Officer,WH-ONT,3,PM,available,PERSON-098,,1
+PERSON-098,Synthetic Staff 098,GIS Analyst,WH-RIV,4,NIGHT,available,PERSON-099,,1
+PERSON-099,Synthetic Staff 099,Supply Chain Planner,PORT-LA,5,AM,on_leave,PERSON-100,,1
+PERSON-100,Synthetic Staff 100,Security Specialist,PORT-LB,1,PM,available,PERSON-001,,1

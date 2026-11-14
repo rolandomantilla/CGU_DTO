@@ -1,0 +1,13 @@
+﻿truck_id,vehicle_type,fuel_type,model_year,mpg_assumed,maintenance_state,available_from_min,home_warehouse_id
+TRUCK-01,Class 8 tractor,diesel,2020,5.75,serviceable,0,WH-CAR
+TRUCK-02,Class 8 tractor,diesel,2021,6.0,serviceable,0,WH-COM
+TRUCK-03,Class 8 tractor,diesel,2022,6.25,serviceable,0,WH-FON
+TRUCK-04,Class 8 tractor,diesel,2023,6.5,serviceable,0,WH-ONT
+TRUCK-05,Class 8 tractor,diesel,2024,5.5,serviceable,0,WH-RIV
+TRUCK-06,Class 8 tractor,diesel,2025,5.75,inspection_due,0,WH-CAR
+TRUCK-07,Class 8 tractor,diesel,2019,6.0,serviceable,0,WH-COM
+TRUCK-08,Class 8 tractor,diesel,2020,6.25,serviceable,0,WH-FON
+TRUCK-09,Class 8 tractor,diesel,2021,6.5,serviceable,0,WH-ONT
+TRUCK-10,Class 8 tractor,diesel,2022,5.5,serviceable,0,WH-RIV
+TRUCK-11,Class 8 tractor,diesel,2023,5.75,serviceable,0,WH-CAR
+TRUCK-12,Class 8 tractor,diesel,2024,6.0,inspection_due,0,WH-COM
