@@ -1,0 +1,13 @@
+condition,scenario_id,severity_minutes,strategy,shipments,scheduled,unassigned,appointment_feasibility_pct,scheduled_cost_usd,scheduled_co2_kg,scheduled_loaded_miles,scheduled_empty_miles,scheduled_community_proxy
+normal,SCN-NORMAL,0,Primary only,40,8,32,20.0,2439.88,1118.29,375.8,302.0,2.45
+normal,SCN-NORMAL,0,Allow alternate,40,8,32,20.0,2439.88,1118.29,375.8,302.0,2.45
+normal,SCN-NORMAL,0,Cost priority,40,8,32,20.0,2439.88,1118.29,375.8,302.0,2.45
+normal,SCN-NORMAL,0,Emissions priority,40,8,32,20.0,2439.88,1118.29,375.8,302.0,2.45
+slowdown,SCN-SLOW,75,Primary only,40,8,32,20.0,1923.91,786.92,174.3,298.5,2.63
+slowdown,SCN-SLOW,75,Allow alternate,40,9,31,22.5,2399.23,1044.39,323.0,310.0,3.19
+slowdown,SCN-SLOW,75,Cost priority,40,9,31,22.5,2516.91,1101.48,357.6,310.0,3.29
+slowdown,SCN-SLOW,75,Emissions priority,40,9,31,22.5,2516.91,1101.48,357.6,310.0,3.29
+closure,SCN-CLOSE,150,Primary only,40,8,32,20.0,1796.26,718.12,136.7,298.5,2.69
+closure,SCN-CLOSE,150,Allow alternate,40,9,31,22.5,2399.23,1044.39,323.0,310.0,3.19
+closure,SCN-CLOSE,150,Cost priority,40,9,31,22.5,2516.91,1101.48,357.6,310.0,3.29
+closure,SCN-CLOSE,150,Emissions priority,40,9,31,22.5,2516.91,1101.48,357.6,310.0,3.29

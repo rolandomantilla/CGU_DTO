@@ -1,0 +1,161 @@
+scenario,shipment_id,priority,status,truck_id,trip_number,cost_usd,co2_kg,loaded_miles,empty_miles,route_segments,empty_route_segments,reason
+Normal,SHP-001,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-002,critical,scheduled,TRUCK-04,1,503.03,239.25,81.0,64.0,S-002;S-003;S-004;S-005,S-004;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-003,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-004,high,scheduled,TRUCK-08,1,372.17,173.25,27.0,78.0,S-002;S-003,S-006;S-004;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-005,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-006,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-007,high,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Normal,SHP-008,critical,scheduled,TRUCK-02,2,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-009,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-010,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-011,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-012,routine,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Normal,SHP-013,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-014,critical,scheduled,TRUCK-01,1,143.77,61.05,27.0,10.0,S-002;S-003,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-015,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-016,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-017,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-018,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-019,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-020,critical,scheduled,TRUCK-07,1,372.17,173.25,78.0,27.0,S-002;S-003;S-004;S-006,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-021,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-022,high,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Normal,SHP-023,critical,scheduled,TRUCK-02,1,136.5,57.75,9.0,26.0,S-001,S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-024,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-025,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-026,critical,scheduled,TRUCK-03,1,493.07,234.3,64.0,78.0,S-002;S-003;S-004,S-006;S-004;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-027,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-028,high,scheduled,TRUCK-02,3,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-029,critical,scheduled,TRUCK-11,1,136.5,57.75,26.0,9.0,S-001;S-003,S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-030,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-031,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-032,critical,scheduled,TRUCK-09,1,503.03,239.25,81.0,64.0,S-002;S-003;S-004;S-005,S-004;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-033,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-034,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-035,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-036,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-037,high,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Normal,SHP-038,critical,scheduled,TRUCK-01,2,143.77,61.05,10.0,27.0,S-002,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Normal,SHP-039,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Normal,SHP-040,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-001,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-002,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-003,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-004,high,scheduled,TRUCK-04,1,377.67,174.9,27.0,79.0,S-002;S-003,S-009;S-013;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-005,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-006,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-007,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-008,critical,scheduled,TRUCK-02,2,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-009,routine,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Highway slowdown,SHP-010,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-011,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-012,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-013,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-014,critical,scheduled,TRUCK-01,1,143.77,61.05,27.0,10.0,S-002;S-003,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-015,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-016,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-017,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-018,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-019,high,scheduled,TRUCK-03,1,399.37,186.45,26.0,87.0,S-001;S-003,S-011;S-013;S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-020,critical,scheduled,TRUCK-07,1,406.63,189.75,88.0,27.0,S-002;S-003;S-013;S-011,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-021,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-022,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-023,critical,scheduled,TRUCK-02,1,136.5,57.75,9.0,26.0,S-001,S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-024,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-025,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-026,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-027,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-028,high,scheduled,TRUCK-02,3,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-029,critical,scheduled,TRUCK-11,1,136.5,57.75,26.0,9.0,S-001;S-003,S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-030,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-031,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-032,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-033,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-034,high,scheduled,TRUCK-09,1,377.67,174.9,27.0,79.0,S-002;S-003,S-009;S-013;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-035,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-036,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-037,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Highway slowdown,SHP-038,critical,scheduled,TRUCK-01,2,143.77,61.05,10.0,27.0,S-002,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Highway slowdown,SHP-039,routine,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Highway slowdown,SHP-040,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-001,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-002,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-003,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-004,high,scheduled,TRUCK-04,1,377.67,174.9,27.0,79.0,S-002;S-003,S-009;S-013;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-005,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-006,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-007,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-008,critical,scheduled,TRUCK-02,2,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-009,routine,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Road closure,SHP-010,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-011,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-012,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-013,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-014,critical,scheduled,TRUCK-01,1,143.77,61.05,27.0,10.0,S-002;S-003,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-015,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-016,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-017,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-018,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-019,high,scheduled,TRUCK-03,1,399.37,186.45,26.0,87.0,S-001;S-003,S-011;S-013;S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-020,critical,scheduled,TRUCK-07,1,406.63,189.75,88.0,27.0,S-002;S-003;S-013;S-011,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-021,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-022,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-023,critical,scheduled,TRUCK-02,1,136.5,57.75,9.0,26.0,S-001,S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-024,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-025,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-026,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-027,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-028,high,scheduled,TRUCK-02,3,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-029,critical,scheduled,TRUCK-11,1,136.5,57.75,26.0,9.0,S-001;S-003,S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-030,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-031,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-032,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-033,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-034,high,scheduled,TRUCK-09,1,377.67,174.9,27.0,79.0,S-002;S-003,S-009;S-013;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-035,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-036,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-037,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Road closure,SHP-038,critical,scheduled,TRUCK-01,2,143.77,61.05,10.0,27.0,S-002,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Road closure,SHP-039,routine,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Road closure,SHP-040,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-001,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-002,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-003,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-004,high,scheduled,TRUCK-07,1,203.2,89.1,27.0,27.0,S-002;S-003,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-005,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-006,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-007,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-008,critical,scheduled,TRUCK-01,1,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-009,routine,scheduled,TRUCK-09,1,316.83,146.85,26.0,63.0,S-001;S-003,S-004;S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-010,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-011,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-012,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-013,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-014,critical,scheduled,TRUCK-02,1,203.2,89.1,27.0,27.0,S-002;S-003,S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-015,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-016,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-017,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-018,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-019,high,scheduled,TRUCK-02,2,195.93,85.8,26.0,26.0,S-001;S-003,S-003;S-001,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-020,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-021,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-022,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-023,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-024,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-025,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-026,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-027,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-028,high,scheduled,TRUCK-04,1,264.67,122.1,10.0,64.0,S-002,S-004;S-003;S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-029,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-030,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-031,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-032,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-033,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-034,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-035,critical,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-036,routine,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-037,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination
+Pickup delay,SHP-038,critical,scheduled,TRUCK-11,1,84.33,33.0,10.0,10.0,S-002,S-002,"Graph shortest path, not actual truck routing; No confirmed warehouse reservation or legal HOS validation"
+Pickup delay,SHP-039,routine,unassigned,,,,,,,,,No modeled receiving capacity in original appointment slot
+Pickup delay,SHP-040,high,unassigned,,,,,,,,,No time-feasible truck/driver/route combination

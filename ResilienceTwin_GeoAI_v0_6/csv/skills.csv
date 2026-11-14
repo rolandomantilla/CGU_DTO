@@ -1,0 +1,11 @@
+﻿skill_id,name,category
+SK-GIS,GIS and spatial analysis,technical
+SK-DISPATCH,Fleet dispatch,operations
+SK-SAFETY,Safety assessment,safety
+SK-HAZMAT,Hazardous materials awareness,safety
+SK-ROUTING,Route planning,operations
+SK-FLEET,Fleet maintenance,technical
+SK-RECEIVING,Warehouse receiving,operations
+SK-ANALYTICS,Data analytics,technical
+SK-COMMS,Stakeholder communication,operations
+SK-DRIVING,Commercial driving,operations

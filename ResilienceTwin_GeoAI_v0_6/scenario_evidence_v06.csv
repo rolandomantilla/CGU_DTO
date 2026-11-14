@@ -1,0 +1,5 @@
+scenario,scenario_id,severity_min,policy,shipments,scheduled,unassigned,coverage_pct,priority_service_score,critical_scheduled,trucks_used,trucks_with_multiple_trips,scheduled_cost_usd,scheduled_co2_kg,scheduled_loaded_miles,scheduled_empty_miles,unassigned_cost_usd,unassigned_co2_kg,provably_optimal,network_type,measured_real_world
+Normal,SCN-NORMAL,0,Balanced,40,11,29,27.5,51,9,8,2,2972.67,1362.9,423.0,403.0,,,False,synthetic 9-node graph,False
+Highway slowdown,SCN-SLOW,75,Balanced,40,10,30,25.0,42,6,7,2,2290.54,1029.6,260.0,364.0,,,False,synthetic 9-node graph,False
+Road closure,SCN-CLOSE,150,Balanced,40,10,30,25.0,42,6,7,2,2290.54,1029.6,260.0,364.0,,,False,synthetic 9-node graph,False
+Pickup delay,SCN-PICKUP,90,Balanced,40,7,33,17.5,25,3,6,1,1352.49,598.95,136.0,227.0,,,False,synthetic 9-node graph,False

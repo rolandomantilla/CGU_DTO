@@ -1,0 +1,13 @@
+﻿id,capacity_teu,status,base_port_id
+TRUCK-01,2,available,PORT-LA
+TRUCK-02,2,available,PORT-LB
+TRUCK-03,2,available,PORT-LA
+TRUCK-04,2,available,PORT-LB
+TRUCK-05,2,available,PORT-LA
+TRUCK-06,2,available,PORT-LB
+TRUCK-07,2,available,PORT-LA
+TRUCK-08,2,available,PORT-LB
+TRUCK-09,2,available,PORT-LA
+TRUCK-10,2,available,PORT-LB
+TRUCK-11,2,available,PORT-LA
+TRUCK-12,2,available,PORT-LB

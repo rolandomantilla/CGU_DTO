@@ -1,0 +1,13 @@
+condition,policy,shipments,scheduled,unassigned,priority_service_score,critical_scheduled,scheduled_cost_usd,scheduled_co2_kg,scheduled_loaded_miles,scheduled_empty_miles,scheduled_community_proxy,solver_proven_optimal
+Normal,Reliability first,40,8,32,40,8,2408.76,1109.55,370.5,301.96,2.45,True
+Normal,Lowest cost,40,8,32,40,8,2056.81,882.5,233.4,301.45,2.56,True
+Normal,Lowest CO2,40,8,32,40,8,2056.82,882.5,233.4,301.45,2.56,True
+Normal,Balanced,40,8,32,40,8,2056.82,882.5,233.4,301.45,2.56,True
+75-minute slowdown,Reliability first,40,8,32,40,8,2270.57,994.86,301.5,301.45,3.23,True
+75-minute slowdown,Lowest cost,40,8,32,40,8,2197.31,938.88,266.4,298.53,2.97,True
+75-minute slowdown,Lowest CO2,40,8,32,40,8,2203.35,934.59,263.8,298.53,2.98,True
+75-minute slowdown,Balanced,40,8,32,40,8,2203.35,934.59,263.8,298.53,2.98,True
+Highway closure,Reliability first,40,8,32,40,8,2270.57,994.86,301.5,301.45,3.23,True
+Highway closure,Lowest cost,40,8,32,40,8,2209.76,954.56,280.0,298.53,3.2,True
+Highway closure,Lowest CO2,40,8,32,40,8,2214.19,949.28,276.8,298.53,3.2,True
+Highway closure,Balanced,40,8,32,40,8,2214.19,949.29,276.8,298.53,3.2,True

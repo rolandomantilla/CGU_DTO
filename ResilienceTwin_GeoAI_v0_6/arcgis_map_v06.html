@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ResilienceTwin v0.6 network map</title>
+<link rel="stylesheet" href="https://js.arcgis.com/4.34/esri/themes/light/main.css">
+<style>
+html, body {height:100%; margin:0}
+body {display:grid;grid-template-rows:auto 1fr;font:14px system-ui,sans-serif}
+#controls {display:flex;gap:16px;flex-wrap:wrap;padding:8px;background:#fff}
+#map {min-height:0}
+label {white-space:nowrap}
+</style>
+</head>
+<body>
+<div id="controls">
+  <label>Basemap <select id="basemap" disabled>
+    <option value="streets">Streets</option>
+    <option value="satellite">Satellite</option>
+    <option value="topographic">Topographic</option>
+    <option value="gray">Light gray</option>
+  </select></label>
+  <label style="color:#8e4000"><input type="checkbox" id="loaded" checked> Recommended loaded routes</label>
+  <span style="color:#6830a4">Purple: rerouted</span>
+  <label><input type="checkbox" id="closures" checked> Simulated closure</label>
+  <label><input type="checkbox" id="normal"> Normal routes for rerouted shipments</label>
+  <label style="color:#124d94"><input type="checkbox" id="empty" checked> Empty repositioning</label>
+  <label><input type="checkbox" id="trucks" checked> Trucks</label>
+  <span>Road data © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · <a href="https://www.openstreetmap.org/fixthemap" target="_blank" rel="noopener">Fix the map</a></span>
+  <label style="color:#06715d"><input type="checkbox" id="warehouses" checked> Warehouses</label>
+  <span id="status" role="status">Loading ArcGIS…</span>
+</div>
+<div id="map" aria-label="ArcGIS network map"></div>
+<script type="application/json" id="data">__MAP_DATA__</script>
+<script src="https://js.arcgis.com/4.34/"></script>
+<script>
+const statusLabel = document.getElementById("status");
+const fail = () => { statusLabel.textContent = "ArcGIS could not load. Check your internet connection."; };
+if (typeof require !== "function") {
+  fail();
+} else {
+  require(["esri/Map", "esri/Basemap", "esri/views/MapView", "esri/layers/TileLayer",
+    "esri/layers/GraphicsLayer", "esri/Graphic"], (Map, Basemap, MapView, TileLayer, GraphicsLayer, Graphic) => {
+    const data = JSON.parse(document.getElementById("data").textContent);
+    const point = ([longitude, latitude]) => ({type:"point", longitude, latitude});
+    const marker = (color, style, size) => ({
+      type:"simple-marker", color, style, size, outline:{color:"white", width:1.5}
+    });
+    function overlay(id, graphics) {
+      const layer = new GraphicsLayer({graphics, visible:document.getElementById(id).checked});
+      document.getElementById(id).onchange = event => { layer.visible = event.target.checked; };
+      return layer;
+    }
+    function line(row, color, style, width) {
+      return new Graphic({
+        geometry:{type:"polyline", paths:[row.path], spatialReference:{wkid:4326}},
+        symbol:{type:"simple-line", color, style, width},
+        attributes:{shipment:row.shipment, truck:row.truck},
+        popupTemplate:{title:"{shipment}", content:"Truck {truck}"}
+      });
+    }
+    const loaded = overlay("loaded", data.loaded.map(row => line(row, row.rerouted ? "#7839b5" : "#b95400", "solid", 3)));
+    const empty = overlay("empty", data.empty.map(row => line(row, "#1762b4", "dash", 2)));
+    const normal = overlay("normal", data.normal.map(row => line(row, "#404957", "dash", 4)));
+    const closures = overlay("closures", data.closures.map(row => new Graphic({
+      geometry:{type:"polyline", paths:[row.path], spatialReference:{wkid:4326}},
+      symbol:{type:"simple-line", color:"#bc202c", style:"dot", width:5},
+      attributes:{label:row.label, segment:row.segment},
+      popupTemplate:{title:"Simulated closure · {label}", content:"Modeled corridor {segment}"}
+    })));
+    const nodes = new GraphicsLayer({graphics:data.nodes.map(node => new Graphic({
+      geometry:point([node.lon,node.lat]), symbol:marker("#64748b","circle",7),
+      attributes:{name:node.name}, popupTemplate:{title:"{name}", content:"Modeled network node"}
+    }))});
+    const trucks = overlay("trucks", Object.entries(data.trucks).map(([id, coords]) => new Graphic({
+      geometry:point(coords), symbol:marker("#263141","diamond",11),
+      attributes:{id}, popupTemplate:{title:"{id}", content:"Simulated position along a mapped route"}
+    })));
+    const warehouses = overlay("warehouses", data.warehouses.map(site => new Graphic({
+      geometry:point([site.lon, site.lat]), symbol:marker("#06715d","square",13),
+      attributes:site,
+      popupTemplate:{title:"{name}", content:"{id} · Modeled daily capacity: {daily_capacity}"}
+    })));
+    const picker = document.getElementById("basemap");
+    const services = {
+      streets: ["World_Street_Map"],
+      satellite: ["World_Imagery"],
+      topographic: ["World_Topo_Map"],
+      gray: ["Canvas/World_Light_Gray_Base", "Canvas/World_Light_Gray_Reference"]
+    };
+    const basemaps = Object.fromEntries(Object.entries(services).map(([id, layers]) => {
+      const tiles = layers.map(name => new TileLayer({
+        url: `https://services.arcgisonline.com/ArcGIS/rest/services/${name}/MapServer`
+      }));
+      return [id, new Basemap({baseLayers:[tiles[0]], referenceLayers:tiles.slice(1)})];
+    }));
+    picker.value = data.basemap;
+    let active = picker.value;
+    const map = new Map({basemap:basemaps[active],layers:[normal,loaded,empty,closures,nodes,trucks,warehouses]});
+    const view = new MapView({container:"map",map,center:[-118.0,33.89],zoom:9});
+    picker.onchange = async () => {
+      const next = picker.value;
+      picker.disabled = true;
+      statusLabel.textContent = "Loading basemap…";
+      try {
+        await basemaps[next].loadAll();
+        map.basemap = basemaps[next];
+        active = next;
+        statusLabel.textContent = "";
+      } catch {
+        picker.value = active;
+        statusLabel.textContent = "That basemap could not load.";
+      } finally {
+        picker.disabled = false;
+      }
+    };
+    Promise.all([view.when(), basemaps[active].loadAll()]).then(() => {
+      statusLabel.textContent = "";
+      picker.disabled = false;
+    }).catch(fail);
+  }, fail);
+}
+</script>
+</body>
+</html>

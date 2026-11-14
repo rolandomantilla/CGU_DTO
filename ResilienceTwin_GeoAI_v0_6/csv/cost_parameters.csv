@@ -1,0 +1,7 @@
+﻿param_id,category,value,unit,scenario_basis,confidence
+C-MI,variable_vehicle,2.7,USD/mile,v0.1 engine constant,illustrative
+C-HR,driver_time,28.0,USD/hour,v0.1 engine constant,illustrative
+C-LATE,lateness,1.5,USD/minute late,v0.1 engine constant,illustrative
+C-EXP,expedite,90.0,USD/shipment,v0.1 engine constant,illustrative
+C-APPT,missed_appointment,125.0,USD/event,v0.2 planning assumption (not used by v0.1),illustrative
+C-FUEL,diesel,4.1,USD/gallon,v0.2 planning assumption (not used by v0.1),illustrative

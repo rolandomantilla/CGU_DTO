@@ -1,0 +1,10 @@
+﻿node_id,name,lat,lon,node_type
+N-LA,Port of Los Angeles,33.732,-118.269,port
+N-LB,Port of Long Beach,33.754,-118.216,port
+N-CAR,Carson,33.832,-118.281,hub
+N-COM,Commerce,34.002,-118.159,hub
+N-ONT,Ontario,34.064,-117.651,hub
+N-RIV,Riverside,33.953,-117.396,hub
+N-FON,Fontana,34.097,-117.435,hub
+N-ALT1,Alternate Junction A,33.875,-117.935,schematic
+N-ALT2,Alternate Junction B,34.045,-117.795,schematic

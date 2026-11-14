@@ -1,0 +1,6 @@
+﻿zone_id,name,centroid_lat,centroid_lon,sensitivity_level,sensitive_site,source_quality
+ZONE-CAR,Carson community proxy,33.831,-118.273,4,school vicinity (hypothetical),synthetic
+ZONE-COM,Commerce community proxy,34.004,-118.161,4,residential vicinity (hypothetical),synthetic
+ZONE-ONT,Ontario community proxy,34.063,-117.647,3,residential vicinity (hypothetical),synthetic
+ZONE-RIV,Riverside community proxy,33.953,-117.393,3,community center vicinity (hypothetical),synthetic
+ZONE-FON,Fontana community proxy,34.097,-117.436,4,school vicinity (hypothetical),synthetic

@@ -1,0 +1,9 @@
+﻿key,value
+dataset_name,ResilienceTwin GeoAI foundational data v0.2
+classification,100% synthetic educational sample; actual city and port names used as geographic reference only
+generated_date,2026-11-14
+seed,20261114
+time_basis,integer minutes relative to a fictional common dispatch epoch; NOT actual local clock times
+coordinates,Approximate WGS84 latitude/longitude; schematic geometries NOT drivable routes
+status,"Preliminary illustrative foundation, not operationally validated"
+engineering_note,Existing v0.1 engine only reads six legacy tables. Additional tables are staged for v0.2 logic and must not be described as enforced by current engine.

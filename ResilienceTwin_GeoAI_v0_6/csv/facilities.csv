@@ -1,0 +1,8 @@
+﻿id,name,kind,lat,lon,daily_capacity
+PORT-LA,Port of Los Angeles,port,33.732,-118.269,0
+PORT-LB,Port of Long Beach,port,33.754,-118.216,0
+WH-ONT,Ontario Distribution Center,warehouse,34.064,-117.651,10
+WH-RIV,Riverside Distribution Center,warehouse,33.953,-117.396,8
+WH-CAR,Carson Distribution Center,warehouse,33.832,-118.281,7
+WH-COM,Commerce Distribution Center,warehouse,34.002,-118.159,6
+WH-FON,Fontana Distribution Center,warehouse,34.097,-117.435,9

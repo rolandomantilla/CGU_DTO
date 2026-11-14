@@ -1,0 +1,229 @@
+﻿dependency_id,upstream_type,upstream_id,downstream_type,downstream_id,dependency_type,criticality,notes
+DEP-0001,facility,PORT-LA,shipment,SHP-001,origin_readiness,5,Cargo must be released
+DEP-0002,facility,WH-ONT,shipment,SHP-001,receiving_capacity,5,Receiving slot must be available
+DEP-0003,truck,TRUCK-01,shipment,SHP-001,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0004,driver,DRIVER-01,shipment,SHP-001,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0005,route,SHP-001-primary,shipment,SHP-001,planned_path,4,Primary path schematic
+DEP-0006,facility,PORT-LB,shipment,SHP-002,origin_readiness,5,Cargo must be released
+DEP-0007,facility,WH-RIV,shipment,SHP-002,receiving_capacity,5,Receiving slot must be available
+DEP-0008,truck,TRUCK-02,shipment,SHP-002,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0009,driver,DRIVER-02,shipment,SHP-002,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0010,route,SHP-002-primary,shipment,SHP-002,planned_path,4,Primary path schematic
+DEP-0011,facility,PORT-LA,shipment,SHP-003,origin_readiness,5,Cargo must be released
+DEP-0012,facility,WH-CAR,shipment,SHP-003,receiving_capacity,5,Receiving slot must be available
+DEP-0013,truck,TRUCK-03,shipment,SHP-003,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0014,driver,DRIVER-03,shipment,SHP-003,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0015,route,SHP-003-primary,shipment,SHP-003,planned_path,4,Primary path schematic
+DEP-0016,facility,PORT-LB,shipment,SHP-004,origin_readiness,5,Cargo must be released
+DEP-0017,facility,WH-COM,shipment,SHP-004,receiving_capacity,5,Receiving slot must be available
+DEP-0018,truck,TRUCK-04,shipment,SHP-004,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0019,driver,DRIVER-04,shipment,SHP-004,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0020,route,SHP-004-primary,shipment,SHP-004,planned_path,4,Primary path schematic
+DEP-0021,facility,PORT-LA,shipment,SHP-005,origin_readiness,5,Cargo must be released
+DEP-0022,facility,WH-FON,shipment,SHP-005,receiving_capacity,5,Receiving slot must be available
+DEP-0023,truck,TRUCK-05,shipment,SHP-005,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0024,driver,DRIVER-05,shipment,SHP-005,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0025,route,SHP-005-primary,shipment,SHP-005,planned_path,4,Primary path schematic
+DEP-0026,facility,PORT-LB,shipment,SHP-006,origin_readiness,5,Cargo must be released
+DEP-0027,facility,WH-ONT,shipment,SHP-006,receiving_capacity,5,Receiving slot must be available
+DEP-0028,truck,TRUCK-06,shipment,SHP-006,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0029,driver,DRIVER-06,shipment,SHP-006,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0030,route,SHP-006-primary,shipment,SHP-006,planned_path,4,Primary path schematic
+DEP-0031,facility,PORT-LA,shipment,SHP-007,origin_readiness,5,Cargo must be released
+DEP-0032,facility,WH-RIV,shipment,SHP-007,receiving_capacity,5,Receiving slot must be available
+DEP-0033,truck,TRUCK-07,shipment,SHP-007,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0034,driver,DRIVER-07,shipment,SHP-007,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0035,route,SHP-007-primary,shipment,SHP-007,planned_path,4,Primary path schematic
+DEP-0036,facility,PORT-LB,shipment,SHP-008,origin_readiness,5,Cargo must be released
+DEP-0037,facility,WH-CAR,shipment,SHP-008,receiving_capacity,5,Receiving slot must be available
+DEP-0038,truck,TRUCK-08,shipment,SHP-008,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0039,driver,DRIVER-08,shipment,SHP-008,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0040,route,SHP-008-primary,shipment,SHP-008,planned_path,4,Primary path schematic
+DEP-0041,facility,PORT-LA,shipment,SHP-009,origin_readiness,5,Cargo must be released
+DEP-0042,facility,WH-COM,shipment,SHP-009,receiving_capacity,5,Receiving slot must be available
+DEP-0043,truck,TRUCK-09,shipment,SHP-009,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0044,driver,DRIVER-09,shipment,SHP-009,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0045,route,SHP-009-primary,shipment,SHP-009,planned_path,4,Primary path schematic
+DEP-0046,facility,PORT-LB,shipment,SHP-010,origin_readiness,5,Cargo must be released
+DEP-0047,facility,WH-FON,shipment,SHP-010,receiving_capacity,5,Receiving slot must be available
+DEP-0048,truck,TRUCK-10,shipment,SHP-010,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0049,driver,DRIVER-10,shipment,SHP-010,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0050,route,SHP-010-primary,shipment,SHP-010,planned_path,4,Primary path schematic
+DEP-0051,facility,PORT-LA,shipment,SHP-011,origin_readiness,5,Cargo must be released
+DEP-0052,facility,WH-ONT,shipment,SHP-011,receiving_capacity,5,Receiving slot must be available
+DEP-0053,truck,TRUCK-11,shipment,SHP-011,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0054,driver,DRIVER-11,shipment,SHP-011,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0055,route,SHP-011-primary,shipment,SHP-011,planned_path,4,Primary path schematic
+DEP-0056,facility,PORT-LB,shipment,SHP-012,origin_readiness,5,Cargo must be released
+DEP-0057,facility,WH-RIV,shipment,SHP-012,receiving_capacity,5,Receiving slot must be available
+DEP-0058,truck,TRUCK-12,shipment,SHP-012,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0059,driver,DRIVER-12,shipment,SHP-012,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0060,route,SHP-012-primary,shipment,SHP-012,planned_path,4,Primary path schematic
+DEP-0061,facility,PORT-LA,shipment,SHP-013,origin_readiness,5,Cargo must be released
+DEP-0062,facility,WH-CAR,shipment,SHP-013,receiving_capacity,5,Receiving slot must be available
+DEP-0063,truck,TRUCK-01,shipment,SHP-013,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0064,driver,DRIVER-01,shipment,SHP-013,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0065,route,SHP-013-primary,shipment,SHP-013,planned_path,4,Primary path schematic
+DEP-0066,facility,PORT-LB,shipment,SHP-014,origin_readiness,5,Cargo must be released
+DEP-0067,facility,WH-COM,shipment,SHP-014,receiving_capacity,5,Receiving slot must be available
+DEP-0068,truck,TRUCK-02,shipment,SHP-014,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0069,driver,DRIVER-02,shipment,SHP-014,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0070,route,SHP-014-primary,shipment,SHP-014,planned_path,4,Primary path schematic
+DEP-0071,facility,PORT-LA,shipment,SHP-015,origin_readiness,5,Cargo must be released
+DEP-0072,facility,WH-FON,shipment,SHP-015,receiving_capacity,5,Receiving slot must be available
+DEP-0073,truck,TRUCK-03,shipment,SHP-015,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0074,driver,DRIVER-03,shipment,SHP-015,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0075,route,SHP-015-primary,shipment,SHP-015,planned_path,4,Primary path schematic
+DEP-0076,facility,PORT-LB,shipment,SHP-016,origin_readiness,5,Cargo must be released
+DEP-0077,facility,WH-ONT,shipment,SHP-016,receiving_capacity,5,Receiving slot must be available
+DEP-0078,truck,TRUCK-04,shipment,SHP-016,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0079,driver,DRIVER-04,shipment,SHP-016,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0080,route,SHP-016-primary,shipment,SHP-016,planned_path,4,Primary path schematic
+DEP-0081,facility,PORT-LA,shipment,SHP-017,origin_readiness,5,Cargo must be released
+DEP-0082,facility,WH-RIV,shipment,SHP-017,receiving_capacity,5,Receiving slot must be available
+DEP-0083,truck,TRUCK-05,shipment,SHP-017,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0084,driver,DRIVER-05,shipment,SHP-017,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0085,route,SHP-017-primary,shipment,SHP-017,planned_path,4,Primary path schematic
+DEP-0086,facility,PORT-LB,shipment,SHP-018,origin_readiness,5,Cargo must be released
+DEP-0087,facility,WH-CAR,shipment,SHP-018,receiving_capacity,5,Receiving slot must be available
+DEP-0088,truck,TRUCK-06,shipment,SHP-018,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0089,driver,DRIVER-06,shipment,SHP-018,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0090,route,SHP-018-primary,shipment,SHP-018,planned_path,4,Primary path schematic
+DEP-0091,facility,PORT-LA,shipment,SHP-019,origin_readiness,5,Cargo must be released
+DEP-0092,facility,WH-COM,shipment,SHP-019,receiving_capacity,5,Receiving slot must be available
+DEP-0093,truck,TRUCK-07,shipment,SHP-019,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0094,driver,DRIVER-07,shipment,SHP-019,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0095,route,SHP-019-primary,shipment,SHP-019,planned_path,4,Primary path schematic
+DEP-0096,facility,PORT-LB,shipment,SHP-020,origin_readiness,5,Cargo must be released
+DEP-0097,facility,WH-FON,shipment,SHP-020,receiving_capacity,5,Receiving slot must be available
+DEP-0098,truck,TRUCK-08,shipment,SHP-020,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0099,driver,DRIVER-08,shipment,SHP-020,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0100,route,SHP-020-primary,shipment,SHP-020,planned_path,4,Primary path schematic
+DEP-0101,facility,PORT-LA,shipment,SHP-021,origin_readiness,5,Cargo must be released
+DEP-0102,facility,WH-ONT,shipment,SHP-021,receiving_capacity,5,Receiving slot must be available
+DEP-0103,truck,TRUCK-09,shipment,SHP-021,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0104,driver,DRIVER-09,shipment,SHP-021,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0105,route,SHP-021-primary,shipment,SHP-021,planned_path,4,Primary path schematic
+DEP-0106,facility,PORT-LB,shipment,SHP-022,origin_readiness,5,Cargo must be released
+DEP-0107,facility,WH-RIV,shipment,SHP-022,receiving_capacity,5,Receiving slot must be available
+DEP-0108,truck,TRUCK-10,shipment,SHP-022,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0109,driver,DRIVER-10,shipment,SHP-022,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0110,route,SHP-022-primary,shipment,SHP-022,planned_path,4,Primary path schematic
+DEP-0111,facility,PORT-LA,shipment,SHP-023,origin_readiness,5,Cargo must be released
+DEP-0112,facility,WH-CAR,shipment,SHP-023,receiving_capacity,5,Receiving slot must be available
+DEP-0113,truck,TRUCK-11,shipment,SHP-023,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0114,driver,DRIVER-11,shipment,SHP-023,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0115,route,SHP-023-primary,shipment,SHP-023,planned_path,4,Primary path schematic
+DEP-0116,facility,PORT-LB,shipment,SHP-024,origin_readiness,5,Cargo must be released
+DEP-0117,facility,WH-COM,shipment,SHP-024,receiving_capacity,5,Receiving slot must be available
+DEP-0118,truck,TRUCK-12,shipment,SHP-024,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0119,driver,DRIVER-12,shipment,SHP-024,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0120,route,SHP-024-primary,shipment,SHP-024,planned_path,4,Primary path schematic
+DEP-0121,facility,PORT-LA,shipment,SHP-025,origin_readiness,5,Cargo must be released
+DEP-0122,facility,WH-FON,shipment,SHP-025,receiving_capacity,5,Receiving slot must be available
+DEP-0123,truck,TRUCK-01,shipment,SHP-025,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0124,driver,DRIVER-01,shipment,SHP-025,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0125,route,SHP-025-primary,shipment,SHP-025,planned_path,4,Primary path schematic
+DEP-0126,facility,PORT-LB,shipment,SHP-026,origin_readiness,5,Cargo must be released
+DEP-0127,facility,WH-ONT,shipment,SHP-026,receiving_capacity,5,Receiving slot must be available
+DEP-0128,truck,TRUCK-02,shipment,SHP-026,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0129,driver,DRIVER-02,shipment,SHP-026,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0130,route,SHP-026-primary,shipment,SHP-026,planned_path,4,Primary path schematic
+DEP-0131,facility,PORT-LA,shipment,SHP-027,origin_readiness,5,Cargo must be released
+DEP-0132,facility,WH-RIV,shipment,SHP-027,receiving_capacity,5,Receiving slot must be available
+DEP-0133,truck,TRUCK-03,shipment,SHP-027,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0134,driver,DRIVER-03,shipment,SHP-027,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0135,route,SHP-027-primary,shipment,SHP-027,planned_path,4,Primary path schematic
+DEP-0136,facility,PORT-LB,shipment,SHP-028,origin_readiness,5,Cargo must be released
+DEP-0137,facility,WH-CAR,shipment,SHP-028,receiving_capacity,5,Receiving slot must be available
+DEP-0138,truck,TRUCK-04,shipment,SHP-028,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0139,driver,DRIVER-04,shipment,SHP-028,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0140,route,SHP-028-primary,shipment,SHP-028,planned_path,4,Primary path schematic
+DEP-0141,facility,PORT-LA,shipment,SHP-029,origin_readiness,5,Cargo must be released
+DEP-0142,facility,WH-COM,shipment,SHP-029,receiving_capacity,5,Receiving slot must be available
+DEP-0143,truck,TRUCK-05,shipment,SHP-029,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0144,driver,DRIVER-05,shipment,SHP-029,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0145,route,SHP-029-primary,shipment,SHP-029,planned_path,4,Primary path schematic
+DEP-0146,facility,PORT-LB,shipment,SHP-030,origin_readiness,5,Cargo must be released
+DEP-0147,facility,WH-FON,shipment,SHP-030,receiving_capacity,5,Receiving slot must be available
+DEP-0148,truck,TRUCK-06,shipment,SHP-030,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0149,driver,DRIVER-06,shipment,SHP-030,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0150,route,SHP-030-primary,shipment,SHP-030,planned_path,4,Primary path schematic
+DEP-0151,facility,PORT-LA,shipment,SHP-031,origin_readiness,5,Cargo must be released
+DEP-0152,facility,WH-ONT,shipment,SHP-031,receiving_capacity,5,Receiving slot must be available
+DEP-0153,truck,TRUCK-07,shipment,SHP-031,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0154,driver,DRIVER-07,shipment,SHP-031,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0155,route,SHP-031-primary,shipment,SHP-031,planned_path,4,Primary path schematic
+DEP-0156,facility,PORT-LB,shipment,SHP-032,origin_readiness,5,Cargo must be released
+DEP-0157,facility,WH-RIV,shipment,SHP-032,receiving_capacity,5,Receiving slot must be available
+DEP-0158,truck,TRUCK-08,shipment,SHP-032,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0159,driver,DRIVER-08,shipment,SHP-032,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0160,route,SHP-032-primary,shipment,SHP-032,planned_path,4,Primary path schematic
+DEP-0161,facility,PORT-LA,shipment,SHP-033,origin_readiness,5,Cargo must be released
+DEP-0162,facility,WH-CAR,shipment,SHP-033,receiving_capacity,5,Receiving slot must be available
+DEP-0163,truck,TRUCK-09,shipment,SHP-033,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0164,driver,DRIVER-09,shipment,SHP-033,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0165,route,SHP-033-primary,shipment,SHP-033,planned_path,4,Primary path schematic
+DEP-0166,facility,PORT-LB,shipment,SHP-034,origin_readiness,5,Cargo must be released
+DEP-0167,facility,WH-COM,shipment,SHP-034,receiving_capacity,5,Receiving slot must be available
+DEP-0168,truck,TRUCK-10,shipment,SHP-034,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0169,driver,DRIVER-10,shipment,SHP-034,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0170,route,SHP-034-primary,shipment,SHP-034,planned_path,4,Primary path schematic
+DEP-0171,facility,PORT-LA,shipment,SHP-035,origin_readiness,5,Cargo must be released
+DEP-0172,facility,WH-FON,shipment,SHP-035,receiving_capacity,5,Receiving slot must be available
+DEP-0173,truck,TRUCK-11,shipment,SHP-035,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0174,driver,DRIVER-11,shipment,SHP-035,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0175,route,SHP-035-primary,shipment,SHP-035,planned_path,4,Primary path schematic
+DEP-0176,facility,PORT-LB,shipment,SHP-036,origin_readiness,5,Cargo must be released
+DEP-0177,facility,WH-ONT,shipment,SHP-036,receiving_capacity,5,Receiving slot must be available
+DEP-0178,truck,TRUCK-12,shipment,SHP-036,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0179,driver,DRIVER-12,shipment,SHP-036,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0180,route,SHP-036-primary,shipment,SHP-036,planned_path,4,Primary path schematic
+DEP-0181,facility,PORT-LA,shipment,SHP-037,origin_readiness,5,Cargo must be released
+DEP-0182,facility,WH-RIV,shipment,SHP-037,receiving_capacity,5,Receiving slot must be available
+DEP-0183,truck,TRUCK-01,shipment,SHP-037,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0184,driver,DRIVER-01,shipment,SHP-037,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0185,route,SHP-037-primary,shipment,SHP-037,planned_path,4,Primary path schematic
+DEP-0186,facility,PORT-LB,shipment,SHP-038,origin_readiness,5,Cargo must be released
+DEP-0187,facility,WH-CAR,shipment,SHP-038,receiving_capacity,5,Receiving slot must be available
+DEP-0188,truck,TRUCK-02,shipment,SHP-038,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0189,driver,DRIVER-02,shipment,SHP-038,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0190,route,SHP-038-primary,shipment,SHP-038,planned_path,4,Primary path schematic
+DEP-0191,facility,PORT-LA,shipment,SHP-039,origin_readiness,5,Cargo must be released
+DEP-0192,facility,WH-COM,shipment,SHP-039,receiving_capacity,5,Receiving slot must be available
+DEP-0193,truck,TRUCK-03,shipment,SHP-039,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0194,driver,DRIVER-03,shipment,SHP-039,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0195,route,SHP-039-primary,shipment,SHP-039,planned_path,4,Primary path schematic
+DEP-0196,facility,PORT-LB,shipment,SHP-040,origin_readiness,5,Cargo must be released
+DEP-0197,facility,WH-FON,shipment,SHP-040,receiving_capacity,5,Receiving slot must be available
+DEP-0198,truck,TRUCK-04,shipment,SHP-040,vehicle_assignment,5,Shared truck assignment not resolved in v0.1
+DEP-0199,driver,DRIVER-04,shipment,SHP-040,operator_assignment,5,Driver hours not enforced in v0.1
+DEP-0200,route,SHP-040-primary,shipment,SHP-040,planned_path,4,Primary path schematic
+DEP-0201,resource,RES-PORT-LA-forklift,facility,PORT-LA,facility_operability,3,Resource loss can reduce throughput
+DEP-0202,resource,RES-PORT-LA-dock_door,facility,PORT-LA,facility_operability,3,Resource loss can reduce throughput
+DEP-0203,resource,RES-PORT-LA-power_unit,facility,PORT-LA,facility_operability,3,Resource loss can reduce throughput
+DEP-0204,resource,RES-PORT-LA-dispatch_terminal,facility,PORT-LA,facility_operability,3,Resource loss can reduce throughput
+DEP-0205,resource,RES-PORT-LB-forklift,facility,PORT-LB,facility_operability,3,Resource loss can reduce throughput
+DEP-0206,resource,RES-PORT-LB-dock_door,facility,PORT-LB,facility_operability,3,Resource loss can reduce throughput
+DEP-0207,resource,RES-PORT-LB-power_unit,facility,PORT-LB,facility_operability,3,Resource loss can reduce throughput
+DEP-0208,resource,RES-PORT-LB-dispatch_terminal,facility,PORT-LB,facility_operability,3,Resource loss can reduce throughput
+DEP-0209,resource,RES-WH-CAR-forklift,facility,WH-CAR,facility_operability,3,Resource loss can reduce throughput
+DEP-0210,resource,RES-WH-CAR-dock_door,facility,WH-CAR,facility_operability,3,Resource loss can reduce throughput
+DEP-0211,resource,RES-WH-CAR-power_unit,facility,WH-CAR,facility_operability,3,Resource loss can reduce throughput
+DEP-0212,resource,RES-WH-CAR-dispatch_terminal,facility,WH-CAR,facility_operability,3,Resource loss can reduce throughput
+DEP-0213,resource,RES-WH-COM-forklift,facility,WH-COM,facility_operability,3,Resource loss can reduce throughput
+DEP-0214,resource,RES-WH-COM-dock_door,facility,WH-COM,facility_operability,3,Resource loss can reduce throughput
+DEP-0215,resource,RES-WH-COM-power_unit,facility,WH-COM,facility_operability,3,Resource loss can reduce throughput
+DEP-0216,resource,RES-WH-COM-dispatch_terminal,facility,WH-COM,facility_operability,3,Resource loss can reduce throughput
+DEP-0217,resource,RES-WH-FON-forklift,facility,WH-FON,facility_operability,3,Resource loss can reduce throughput
+DEP-0218,resource,RES-WH-FON-dock_door,facility,WH-FON,facility_operability,3,Resource loss can reduce throughput
+DEP-0219,resource,RES-WH-FON-power_unit,facility,WH-FON,facility_operability,3,Resource loss can reduce throughput
+DEP-0220,resource,RES-WH-FON-dispatch_terminal,facility,WH-FON,facility_operability,3,Resource loss can reduce throughput
+DEP-0221,resource,RES-WH-ONT-forklift,facility,WH-ONT,facility_operability,3,Resource loss can reduce throughput
+DEP-0222,resource,RES-WH-ONT-dock_door,facility,WH-ONT,facility_operability,3,Resource loss can reduce throughput
+DEP-0223,resource,RES-WH-ONT-power_unit,facility,WH-ONT,facility_operability,3,Resource loss can reduce throughput
+DEP-0224,resource,RES-WH-ONT-dispatch_terminal,facility,WH-ONT,facility_operability,3,Resource loss can reduce throughput
+DEP-0225,resource,RES-WH-RIV-forklift,facility,WH-RIV,facility_operability,3,Resource loss can reduce throughput
+DEP-0226,resource,RES-WH-RIV-dock_door,facility,WH-RIV,facility_operability,3,Resource loss can reduce throughput
+DEP-0227,resource,RES-WH-RIV-power_unit,facility,WH-RIV,facility_operability,3,Resource loss can reduce throughput
+DEP-0228,resource,RES-WH-RIV-dispatch_terminal,facility,WH-RIV,facility_operability,3,Resource loss can reduce throughput
