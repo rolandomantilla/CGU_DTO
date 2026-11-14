@@ -17,6 +17,7 @@ st.title('ResilienceTwin GeoAI v0.6 | Multi-trip Decision Lab')
 st.caption('Research demonstration • Synthetic Southern California road graph • No operational dispatch actions')
 
 with st.sidebar:
+    st.page_link('pages/user_guide.py', label='User guide')
     st.header('Scenario assistant')
     model = os.environ.get('RESILIENCETWIN_OLLAMA_MODEL', '').strip()
     api_key = os.environ.get('OPENAI_API_KEY', '').strip()
